@@ -26,13 +26,16 @@ function scorolling(){
 //variabls
 const cartList = document.getElementById('carts'),
     clearAll = document.querySelector('.clear-all'),
-    cartListNumber = cartList.childElementCount,
     cartBadge = document.getElementById('cart-badge');
+
+let   productList = document.querySelectorAll('.products');
     
 //event listener
     eventsListener();
 function eventsListener(){
-    document.addEventListener('click', byeProduct);
+    productList.forEach(function(product){
+        product.addEventListener('click', byeProduct);
+    })
     cartList.addEventListener('click', removeItem);
     document.addEventListener('DOMContentLoaded', takeFromLS);
     clearAll.addEventListener('click', removeAll);

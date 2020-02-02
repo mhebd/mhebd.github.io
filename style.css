@@ -110,14 +110,23 @@ a:hover{
     width: 300px;
     overflow-y: scroll;
     max-height: 400px;
-    display: block;
-    visibility: hidden;
-    opacity: 0;
-    transition: all .3s ease-in;
 }
-.user-menu .dropdown:hover .cart{
-    visibility: visible;
-    opacity: 1;
+
+@media (min-width:768px) {
+    .user-menu .cart {
+        left: -390% !important;
+        width: 300px;
+        overflow-y: scroll;
+        max-height: 400px;
+        display: block;
+        visibility: hidden;
+        opacity: 0;
+        transition: all .3s ease-in;
+    }
+    .user-menu .dropdown:hover .cart{
+        visibility: visible;
+        opacity: 1;
+    }
 }
 .user-menu .cart-icon{
     position: relative;
@@ -474,7 +483,7 @@ a:hover{
 }
 .page-heading-wrapper .page-heading h4{
     font-size: 22px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.205);
+    border-bottom: 1px solid rgb(27, 212, 27);
     display: inline-block;
     padding-bottom: 10px;
     color: rgb(107, 107, 107);
