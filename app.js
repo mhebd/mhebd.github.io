@@ -18,6 +18,48 @@ function scorolling(){
 
 
 
+/**
+ * cart list display toggle class
+ */
+
+const cartIcon = document.querySelector('.cart-icon'),
+    cartDrop = document.querySelector('.cart');
+    cartIcon.addEventListener('click', clicked);
+function clicked(){
+    cartDrop.classList.toggle('display');
+}
+
+
+
+/**
+ * quantity increase ans decrease 
+ */
+
+let qprev = document.querySelector('.quantity-prev'),
+    qnext = document.querySelector('.quantity-next');
+
+    qprev.addEventListener('click',function(){
+        let quantityN = document.querySelector('.quantity-number');
+        if(quantityN.value > 1){
+            quantityN.value--;
+        }
+        
+    });
+
+
+    qnext.addEventListener('click', function(){
+        let quantityN = document.querySelector('.quantity-number');
+        quantityN.value++;
+    })
+
+
+
+
+
+
+
+
+
 
 /**
  * Make a cart list
@@ -90,7 +132,6 @@ function setIntoCart(itemInfo){
 
 
 function removeItem(e){
-    e.preventDefault();
     if(e.target.classList.contains('remove')){
         let par = e.target.parentElement.parentElement;
         let id = par.querySelector('.remove').getAttribute('data-id');

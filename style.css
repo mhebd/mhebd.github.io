@@ -3,7 +3,7 @@
 body{
     margin:0;
     padding:0;
-    background: white;
+    background: rgb(241, 241, 241);
 }
 
 .container-fluid{
@@ -35,6 +35,9 @@ a:hover{
 .form-control:focus , .btn:focus{
     box-shadow: 0px 0px 0px black;
 }
+.btn{
+    border:0px !important;
+}
 
 
 /* home page styling start */
@@ -57,7 +60,9 @@ a:hover{
 .upper-nav .nav .nav-item a:hover{
     color:rgb(27, 212, 27);
 }
-
+.main-navbar-wrapper{
+    background: #ffffff;
+}
 .main-navbar-wrapper .navbar-nav .nav-item .nav-link {
     color:gray;
     text-transform: uppercase;
@@ -124,6 +129,22 @@ a:hover{
         transition: all .3s ease-in;
     }
     .user-menu .dropdown:hover .cart{
+        visibility: visible;
+        opacity: 1;
+    }
+}
+@media (max-width:767.98px) {
+    .user-menu .cart {
+        left: -390% !important;
+        width: 300px;
+        overflow-y: scroll;
+        max-height: 400px;
+        display: block;
+        visibility: hidden;
+        opacity: 0;
+        transition: all .3s ease-in;
+    }
+    .user-menu .display{
         visibility: visible;
         opacity: 1;
     }
@@ -493,7 +514,7 @@ a:hover{
 .contact-form-wrapper {
     margin-bottom: 100px;
 }
-.contact-form-wrapper .form-control{
+.contact-form-wrapper .form-control, .shipping-form .form-control{
     border-radius: 0px;
     border:none;
     border-bottom: 1px solid;
@@ -502,7 +523,7 @@ a:hover{
 .contact-form-wrapper .message{
     resize: none;
 }
-.contact-form-wrapper .form-control:focus {
+.contact-form-wrapper .form-control:focus, .shipping-form .form-control:focus {
     box-shadow: 0px 0px 0px black;
     border-color: rgb(27, 212, 27);
 }
@@ -527,4 +548,23 @@ a:hover{
     border:none;
     outline: none;
     background: transparent;
+}
+
+
+
+.checkout-wrapper{
+    margin-bottom: 100px;
+}
+.checkout-item-info .table th,.checkout-item-info .table td{
+    border-top: 0px ;
+}
+.checkout-item-info .quantity-box{
+    display: inline-block;
+    border:1px solid gray;
+}
+.checkout-item-info .quantity-number {
+    width:50px;
+    background: transparent;
+    border: 0px;
+    text-align: center;
 }
