@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>See Food | Get Our Best Product At Best Price</title>
+
+    <link rel="stylesheet" href="lib/bootstrap-4/css/bootstrap.css">
+    <link rel="stylesheet" href="lib/animate/animate.css">
+    <link rel="stylesheet" href="lib/jquery-ui/jquery-ui.css">
+    <link rel="stylesheet" href="lib/Jquery-price-range/price_range_style.css">
+    <!-- Main stylling -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container-wrapper">
+        <div class="container-fluid">
+
+            <header>
+                <div class="upper-nav-wrapper">
+                    <div class="container">
+                        <div class="upper-nav">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="extra-info">
+                                        <ul class="nav justify-content-center justify-content-md-start">
+                                            <li class="nav-item">
+                                                <a href="tel:+8801521508253" class="nav-link">+8801521508253</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="mailto:mhemonhossain@gmail.com"
+                                                    class="nav-link">support@mail.com</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- upper nav left side end -->
+
+                                <div class="col-md-6">
+                                    <div class="extra-menu">
+                                        <ul class="nav justify-content-md-end justify-content-center">
+                                            <li class="nav-item">
+                                                <a href="#" class="nav-link">Gift Card</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="#" class="nav-link">Track Order</a>
+                                            </li>
+                                            <li class="nav-item dropdown">
+                                                <a href="#" class="nav-link dropdown-toggle"
+                                                    data-toggle="dropdown">Language</a>
+                                                <div class="dropdown-menu">
+                                                    <a href="#" class="dropdown-item">English</a>
+                                                    <a href="#" class="dropdown-item">Bangla</a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- upper nav right side end -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- upper nav end -->
+
+                <div class="sm-brand-logo d-block d-sm-none">
+                    <div class="container">
+                        <div class="brand-logo mx-auto text-center">
+                            <a href="#" class="brand-logo-link">
+                                <img src="image/ns-logo.jpg" alt="See Food Logo" class="img-fluid"
+                                    style="max-height: 50px;">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- small device navbar brand sectio end -->
+
+                <div class="main-navbar-wrapper" id="main-navbar">
+                    <div class="">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-9 col-sm-8 col-4">
+                                    <div class="navbar navbar-expand-lg bg-white">
+
+                                        <div class="navbar-brand d-none d-sm-block">
+                                            <a href="#" class="brand-link">
+                                                <img src="image/ns-logo.jpg" alt="" class="img-fluid"
+                                                    style="max-height: 50px;">
+                                            </a>
+                                        </div>
+                                        <!-- navbar brand end -->
+
+                                        <button class="navbar-toggler" data-toggle="collapse" data-target="#main-menu">
+                                            <i class="fas fa-bars"></i>
+                                        </button>
+                                        <!-- navbar toggler button end -->
+
+                                        <div class="navbar-collapse collapse" id="main-menu">
+                                            <ul class="navbar-nav mx-auto">
+                                                <li class="nav-item">
+                                                    <a href="index.html" class="nav-link ">Home</a>
+                                                </li>
+                                                <li class="nav-item dropdown">
+                                                    <a href="#" class="nav-link active dropdown-toggle"
+                                                        data-toggle="dropdown">shop</a>
+                                                    <div class="dropdown-menu">
+                                                        <a href="bangla.html" class="dropdown-item">Bengali</a>
+                                                        <a href="indian.html" class="dropdown-item">Indian</a>
+                                                        <a href="thai.html" class="dropdown-item active">Thai</a>
+                                                        <a href="chinese.html" class="dropdown-item">Chinese</a>
+                                                    </div>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="blog.html" class="nav-link">blog</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="contact.html" class="nav-link">contact</a>
+                                                </li>
+                                            </ul>
+
+                                        </div>
+                                    </div>
+                                    <!-- main menu end -->
+                                </div>
+
+                                <div class="col-md-3 col-sm-4 col-8">
+                                    <div class="user-menu-wrapper">
+                                        <div class="user-menu">
+                                            <ul class="nav justify-content-end">
+                                                <li class="nav-item dropdown">
+                                                    <a href="#" class="nav-link" data-toggle="dropdown"><i
+                                                            class="fas fa-search"></i></a>
+                                                    <div class="dropdown-menu search">
+                                                        <div class="search-form">
+                                                            <form action="#">
+                                                                <div class="input-group">
+                                                                    <input type="text" class="form-control search-box"
+                                                                        placeholder="Search Key & Press Enter">
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="nav-item dropdown">
+                                                    <a href="#" class="nav-link cart-icon" data-toggle="dropdown">
+                                                        <i class="fas fa-shopping-cart"></i>
+                                                        <span class="cart-badge" id="cart-badge"></span>
+                                                    </a>
+                                                    <div class="dropdown-menu cart">
+                                                        <div class="cart-list">
+                                                            <table class="table cart-table">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <td>Image</td>
+                                                                        <td>Name</td>
+                                                                        <td>Price</td>
+                                                                    </tr>
+                                                                </thead>
+
+                                                                <tbody id="carts">
+
+                                                                </tbody>
+                                                            </table>
+
+                                                            <button
+                                                                class="btn btn-outline-success clear-all btn-block">Clear
+                                                                Cart</button>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="nav-item dropdown">
+                                                    <a href="#" class="nav-link" data-toggle="dropdown"><i
+                                                            class="fas fa-user"></i></a>
+                                                    <div class="dropdown-menu user">
+                                                        <a href="#" class="dropdown-item">Sign Up</a>
+                                                        <a href="#" class="dropdown-item">Check Out</a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- user menu end -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- navbar sectio end -->
+                </div>
+
+                <!-- main navbar sectio end -->
+            </header>
+            <!-- header section end -->
+
+
+
+
+
+
+            <section>
+
+                <div class="breadcrumb-wrapper">
+                    <div class="breadcrumb bg-secondery">
+                        <div class="container">
+                            <div class="breadcrumb-menu text-right pr-4">
+                                <a href="index.html" class="breadcrumb-item text-uppercase">home</a>
+                                <a href="#" class="breadcrumb-item text-uppercase">shop</a>
+                                <a href="#" class="breadcrumb-item text-uppercase active">thai</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- breadcrumb section wrapper -->
+
+            </section>
+    
+            <section>
+
+                <div class="page-heading-wrapper">
+                    <div class="container">
+                        <div class="page-heading">
+                            <h4 class="text-capitalize">thai food collection</h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- page headding wrapper end -->
+
+            </section>
+
+
+
+            
+            
+            <section>
+
+                <div class="food-collection-section-wrapper">
+                    <div class="container">
+                        <div class="foods-wrapper">
+
+                            <div class="filter-wrapper mb-4 mt-4">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <div class="box-filter">
+                                            <div class="filter-heading">
+                                                <h5 class="text-capitalize text-muted mb-2">short</h5>
+                                            </div>
+                                            <form action="#" class="filter-form">
+                                                <div class="form-group">
+                                                    <select class="form-control">
+                                                        <option value="newToOld">Short By Time: New To Old</option>
+                                                        <option value="oldToNew">Short By Time: Old To New</option>
+                                                        <option value="aToZ">Short By Name: A To Z</option>
+                                                        <option value="zToA">Short By Name: Z To A</option>
+                                                        <option value="highToLow">Short By Price: High To Low</option>
+                                                        <option value="lowToHigh">Short By Price: Low To HIgh</option>
+                                                    </select>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <!-- short end -->
+
+                                    <div class="col-md-6 mb-3">
+                                        <div class="price-range">
+                                            <div class="filter-heading mb-2">
+                                                <h5 class="text-capitalize text-muted">Price range</h5>
+                                            </div>
+
+                                            <div class="price-range-block">
+                                                <div id="slider-range" class="price-filter-range" name="rangeInput"></div>
+
+                                                <div class="input-value clearfix">
+                                                    <input type="text" min=0 max="990" oninput="validity.valid||(value='0');" id="min_price" class="price-range-field float-left" />
+
+	                                                <input type="text" min=0 max="1000" oninput="validity.valid||(value='1000');" id="max_price" class="price-range-field float-right text-right" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- price range end -->
+                                </div>
+                            </div>
+                            <!-- filter sectin wrapper end -->
+                            <div class="products-wrapper">
+                                <div class="products">
+                                    <div class="row">
+                                        
+                                        <div class="col-md-6 col-lg-3 mb-4">
+                                            <div class="product">
+                                                <div class="card">
+                                                    <div class="card-img">
+                                                        <img src="image/seeFood/7.jpg" alt=""
+                                                            class="card-img-top img-fluid">
+                                                    </div>
+
+                                                    <div class="card-body">
+                                                        <a href="single.html" class="view-in-single">
+                                                            <h4 class="product-name text-uppercase">see food name</h4>
+                                                        </a>
+                                                        <p class="price lead">TK <span>250</span></p>
+                                                        <p class="remove-price"><del>TK<span>500</span></del> <span
+                                                                class="decrease ml-4">-50%</span></p>
+                                                        <a href="#"
+                                                            class="add-to-cart btn btn-success btn-block text-uppercase"
+                                                            data-id="1007">Add to cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- singe product end -->
+
+                                        <div class="col-md-6 col-lg-3 mb-4">
+                                            <div class="product">
+                                                <div class="card">
+                                                    <div class="card-img">
+                                                        <img src="image/seeFood/1.jpg" alt=""
+                                                            class="card-img-top img-fluid">
+                                                    </div>
+
+                                                    <div class="card-body">
+                                                        <a href="single.html" class="view-in-single">
+                                                            <h4 class="product-name text-uppercase">see food name</h4>
+                                                        </a>
+                                                        <p class="price lead">TK <span>250</span></p>
+                                                        <p class="remove-price"><del>TK<span>500</span></del> <span
+                                                                class="decrease ml-4">-50%</span></p>
+                                                        <a href="#"
+                                                            class="add-to-cart btn btn-success btn-block text-uppercase"
+                                                            data-id="1001">Add to cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- singe product end -->
+
+                                        <div class="col-md-6 col-lg-3 mb-4">
+                                            <div class="product">
+                                                <div class="card">
+                                                    <div class="card-img">
+                                                        <img src="image/seeFood/20.jpg" alt=""
+                                                            class="card-img-top img-fluid">
+                                                    </div>
+
+                                                    <div class="card-body">
+                                                        <a href="single.html" class="view-in-single">
+                                                            <h4 class="product-name text-uppercase">see food name</h4>
+                                                        </a>
+                                                        <p class="price lead">TK <span>250</span></p>
+                                                        <p class="remove-price"><del>TK<span>500</span></del> <span
+                                                                class="decrease ml-4">-50%</span></p>
+                                                        <a href="#"
+                                                            class="add-to-cart btn btn-success btn-block text-uppercase"
+                                                            data-id="1020">Add to cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- singe product end -->
+
+                                        <div class="col-md-6 col-lg-3 mb-4">
+                                            <div class="product">
+                                                <div class="card">
+                                                    <div class="card-img">
+                                                        <img src="image/seeFood/24.jpg" alt=""
+                                                            class="card-img-top img-fluid">
+                                                    </div>
+
+                                                    <div class="card-body">
+                                                        <a href="single.html" class="view-in-single">
+                                                            <h4 class="product-name text-uppercase">see food name</h4>
+                                                        </a>
+                                                        <p class="price lead">TK <span>250</span></p>
+                                                        <p class="remove-price"><del>TK<span>500</span></del> <span
+                                                                class="decrease ml-4">-50%</span></p>
+                                                        <a href="#"
+                                                            class="add-to-cart btn btn-success btn-block text-uppercase"
+                                                            data-id="1024">Add to cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- singe product end -->
+
+                                        <div class="col-md-6 col-lg-3 mb-4">
+                                            <div class="product">
+                                                <div class="card">
+                                                    <div class="card-img">
+                                                        <img src="image/seeFood/12.jpg" alt=""
+                                                            class="card-img-top img-fluid">
+                                                    </div>
+
+                                                    <div class="card-body">
+                                                        <a href="single.html" class="view-in-single">
+                                                            <h4 class="product-name text-uppercase">see food name</h4>
+                                                        </a>
+                                                        <p class="price lead">TK <span>250</span></p>
+                                                        <p class="remove-price"><del>TK<span>500</span></del> <span
+                                                                class="decrease ml-4">-50%</span></p>
+                                                        <a href="#"
+                                                            class="add-to-cart btn btn-success btn-block text-uppercase"
+                                                            data-id="1012">Add to cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- singe product end -->
+
+                                        <div class="col-md-6 col-lg-3 mb-4">
+                                            <div class="product">
+                                                <div class="card">
+                                                    <div class="card-img">
+                                                        <img src="image/seeFood/21.jpg" alt=""
+                                                            class="card-img-top img-fluid">
+                                                    </div>
+
+                                                    <div class="card-body">
+                                                        <a href="single.html" class="view-in-single">
+                                                            <h4 class="product-name text-uppercase">see food name</h4>
+                                                        </a>
+                                                        <p class="price lead">TK <span>250</span></p>
+                                                        <p class="remove-price"><del>TK<span>500</span></del> <span
+                                                                class="decrease ml-4">-50%</span></p>
+                                                        <a href="#"
+                                                            class="add-to-cart btn btn-success btn-block text-uppercase"
+                                                            data-id="1021">Add to cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- singe product end -->
+
+                                        <div class="col-md-6 col-lg-3 mb-4">
+                                            <div class="product">
+                                                <div class="card">
+                                                    <div class="card-img">
+                                                        <img src="image/seeFood/14.jpg" alt=""
+                                                            class="card-img-top img-fluid">
+                                                    </div>
+
+                                                    <div class="card-body">
+                                                        <a href="single.html" class="view-in-single">
+                                                            <h4 class="product-name text-uppercase">see food name</h4>
+                                                        </a>
+                                                        <p class="price lead">TK <span>250</span></p>
+                                                        <p class="remove-price"><del>TK<span>500</span></del> <span
+                                                                class="decrease ml-4">-50%</span></p>
+                                                        <a href="#"
+                                                            class="add-to-cart btn btn-success btn-block text-uppercase"
+                                                            data-id="1014">Add to cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- singe product end -->
+
+                                        <div class="col-md-6 col-lg-3 mb-4">
+                                            <div class="product">
+                                                <div class="card">
+                                                    <div class="card-img">
+                                                        <img src="image/seeFood/15.jpg" alt=""
+                                                            class="card-img-top img-fluid">
+                                                    </div>
+
+                                                    <div class="card-body">
+                                                        <a href="single.html" class="view-in-single">
+                                                            <h4 class="product-name text-uppercase">see food name</h4>
+                                                        </a>
+                                                        <p class="price lead">TK <span>250</span></p>
+                                                        <p class="remove-price"><del>TK<span>500</span></del> <span
+                                                                class="decrease ml-4">-50%</span></p>
+                                                        <a href="#"
+                                                            class="add-to-cart btn btn-success btn-block text-uppercase"
+                                                            data-id="1015">Add to cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- singe product end -->
+                                         
+                                        <div class="col-md-6 col-lg-3 mb-4">
+                                            <div class="product">
+                                                <div class="card">
+                                                    <div class="card-img">
+                                                        <img src="image/seeFood/8.jpg" alt=""
+                                                            class="card-img-top img-fluid">
+                                                    </div>
+
+                                                    <div class="card-body">
+                                                        <a href="single.html" class="view-in-single">
+                                                            <h4 class="product-name text-uppercase">see food name</h4>
+                                                        </a>
+                                                        <p class="price lead">TK <span>250</span></p>
+                                                        <p class="remove-price"><del>TK<span>500</span></del> <span
+                                                                class="decrease ml-4">-50%</span></p>
+                                                        <a href="#"
+                                                            class="add-to-cart btn btn-success btn-block text-uppercase"
+                                                            data-id="1008">Add to cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- singe product end -->
+
+                                        <div class="col-md-6 col-lg-3 mb-4">
+                                            <div class="product">
+                                                <div class="card">
+                                                    <div class="card-img">
+                                                        <img src="image/seeFood/9.jpg" alt=""
+                                                            class="card-img-top img-fluid">
+                                                    </div>
+
+                                                    <div class="card-body">
+                                                        <a href="single.html" class="view-in-single">
+                                                            <h4 class="product-name text-uppercase">see food name</h4>
+                                                        </a>
+                                                        <p class="price lead">TK <span>250</span></p>
+                                                        <p class="remove-price"><del>TK<span>500</span></del> <span
+                                                                class="decrease ml-4">-50%</span></p>
+                                                        <a href="#"
+                                                            class="add-to-cart btn btn-success btn-block text-uppercase"
+                                                            data-id="1009">Add to cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- singe product end -->
+
+                                        <div class="col-md-6 col-lg-3 mb-4">
+                                            <div class="product">
+                                                <div class="card">
+                                                    <div class="card-img">
+                                                        <img src="image/seeFood/10.jpg" alt=""
+                                                            class="card-img-top img-fluid">
+                                                    </div>
+
+                                                    <div class="card-body">
+                                                        <a href="single.html" class="view-in-single">
+                                                            <h4 class="product-name text-uppercase">see food name</h4>
+                                                        </a>
+                                                        <p class="price lead">TK <span>250</span></p>
+                                                        <p class="remove-price"><del>TK<span>500</span></del> <span
+                                                                class="decrease ml-4">-50%</span></p>
+                                                        <a href="#"
+                                                            class="add-to-cart btn btn-success btn-block text-uppercase"
+                                                            data-id="1010">Add to cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- singe product end -->
+
+                                        <div class="col-md-6 col-lg-3 mb-4">
+                                            <div class="product">
+                                                <div class="card">
+                                                    <div class="card-img">
+                                                        <img src="image/seeFood/11.jpg" alt=""
+                                                            class="card-img-top img-fluid">
+                                                    </div>
+
+                                                    <div class="card-body">
+                                                        <a href="single.html" class="view-in-single">
+                                                            <h4 class="product-name text-uppercase">see food name</h4>
+                                                        </a>
+                                                        <p class="price lead">TK <span>250</span></p>
+                                                        <p class="remove-price"><del>TK<span>500</span></del> <span
+                                                                class="decrease ml-4">-50%</span></p>
+                                                        <a href="#"
+                                                            class="add-to-cart btn btn-success btn-block text-uppercase"
+                                                            data-id="1011">Add to cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- singe product end -->
+
+                                        <div class="col-md-6 col-lg-3 mb-4">
+                                            <div class="product">
+                                                <div class="card">
+                                                    <div class="card-img">
+                                                        <img src="image/seeFood/12.jpg" alt=""
+                                                            class="card-img-top img-fluid">
+                                                    </div>
+
+                                                    <div class="card-body">
+                                                        <a href="single.html" class="view-in-single">
+                                                            <h4 class="product-name text-uppercase">see food name</h4>
+                                                        </a>
+                                                        <p class="price lead">TK <span>250</span></p>
+                                                        <p class="remove-price"><del>TK<span>500</span></del> <span
+                                                                class="decrease ml-4">-50%</span></p>
+                                                        <a href="#"
+                                                            class="add-to-cart btn btn-success btn-block text-uppercase"
+                                                            data-id="1012">Add to cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- singe product end -->
+
+                                        <div class="col-md-6 col-lg-3 mb-4">
+                                            <div class="product">
+                                                <div class="card">
+                                                    <div class="card-img">
+                                                        <img src="image/seeFood/13.jpg" alt=""
+                                                            class="card-img-top img-fluid">
+                                                    </div>
+
+                                                    <div class="card-body">
+                                                        <a href="single.html" class="view-in-single">
+                                                            <h4 class="product-name text-uppercase">see food name</h4>
+                                                        </a>
+                                                        <p class="price lead">TK <span>250</span></p>
+                                                        <p class="remove-price"><del>TK<span>500</span></del> <span
+                                                                class="decrease ml-4">-50%</span></p>
+                                                        <a href="#"
+                                                            class="add-to-cart btn btn-success btn-block text-uppercase"
+                                                            data-id="1013">Add to cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- singe product end -->
+
+                                        <div class="col-md-6 col-lg-3 mb-4">
+                                            <div class="product">
+                                                <div class="card">
+                                                    <div class="card-img">
+                                                        <img src="image/seeFood/14.jpg" alt=""
+                                                            class="card-img-top img-fluid">
+                                                    </div>
+
+                                                    <div class="card-body">
+                                                        <a href="single.html" class="view-in-single">
+                                                            <h4 class="product-name text-uppercase">see food name</h4>
+                                                        </a>
+                                                        <p class="price lead">TK <span>250</span></p>
+                                                        <p class="remove-price"><del>TK<span>500</span></del> <span
+                                                                class="decrease ml-4">-50%</span></p>
+                                                        <a href="#"
+                                                            class="add-to-cart btn btn-success btn-block text-uppercase"
+                                                            data-id="1014">Add to cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- singe product end -->
+
+                                        <div class="col-md-6 col-lg-3 mb-4">
+                                            <div class="product">
+                                                <div class="card">
+                                                    <div class="card-img">
+                                                        <img src="image/seeFood/15.jpg" alt=""
+                                                            class="card-img-top img-fluid">
+                                                    </div>
+
+                                                    <div class="card-body">
+                                                        <a href="single.html" class="view-in-single">
+                                                            <h4 class="product-name text-uppercase">see food name</h4>
+                                                        </a>
+                                                        <p class="price lead">TK <span>250</span></p>
+                                                        <p class="remove-price"><del>TK<span>500</span></del> <span
+                                                                class="decrease ml-4">-50%</span></p>
+                                                        <a href="#"
+                                                            class="add-to-cart btn btn-success btn-block text-uppercase"
+                                                            data-id="1015">Add to cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- singe product end -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- products end -->
+                        </div>
+                    </div>
+                </div>
+                <!-- others product section end -->
+
+            </section>
+
+
+            
+            <section>
+
+                <div class="pagination-wrapper">
+                    <div class="container">
+                        <div class="pagination-menu">
+                            <ul class="pagination justify-content-center">
+                                <li class="page-item"><a href="#" class="page-link"><i class="fas fa-angle-double-left"></i></a></li>
+                                <li class="page-item"><a href="#" class="page-link">01</a></li>
+                                <li class="page-item"><a href="#" class="page-link">02</a></li>
+                                <li class="page-item"><a href="#" class="page-link">03</a></li>
+                                <li class="page-item active"><a href="#" class="page-link">04</a></li>
+                                <li class="page-item d-none d-sm-block"><a href="#" class="page-link">05</a></li>
+                                <li class="page-item d-none d-sm-block"><a href="#" class="page-link">06</a></li>
+                                <li class="page-item d-none d-sm-block"><a href="#" class="page-link">07</a></li>
+                                <li class="page-item d-none d-sm-block"><a href="#" class="page-link">08</a></li>
+                                <li class="page-item d-none d-sm-block"><a href="#" class="page-link">09</a></li>
+                                <li class="page-item d-none d-sm-block"><a href="#" class="page-link">10</a></li>
+                                <li class="page-item"><a href="#" class="page-link">...</a></li>
+                                <li class="page-item"><a href="#" class="page-link">20</a></li>
+                                <li class="page-item"><a href="#" class="page-link"><i class="fas fa-angle-double-right"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- paginatio section wrapper end -->
+
+            </section>
+
+
+
+            <footer>
+
+                <div class="footer-wrapper text-light">
+                    <div class="container">
+
+                        <div class="footer-upper-wrapper">
+                            <div class="row">
+                                <div class="col-md-4 mb-3">
+                                    <div class="featur-menu">
+                                        <div class="footer-heading">
+                                            <h3 class="heading text-uppercase">features</h3>
+                                        </div>
+
+                                        <div class="bottom-nav">
+                                            <ul class="nav flex-column">
+                                                <li class="nav-item">
+                                                    <a href="about.html" class="nav-link text-capitalize">About us</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="#" class="nav-link text-capitalize">job</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="contact.html" class="nav-link text-capitalize">contact</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="#" class="nav-link text-capitalize">privecy & policy</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- footer up single section -->
+
+                                <div class="col-md-4 mb-3">
+                                    <div class="contact-wrap">
+                                        <div class="footer-heading">
+                                            <h3 class="heading text-uppercase">contact info</h3>
+                                        </div>
+
+                                        <div class="contact-info">
+                                            <div class="phone clearfix">
+                                                <p class="float-left icon pr-3"><i class="fas fa-phone"></i></p>
+                                                <p class="text">+8801521508253</p>
+                                            </div>
+
+                                            <div class="email clearfix">
+                                                <p class="float-left icon pr-3"><i class="fas fa-envelope"></i></p>
+                                                <p class="text">support@mail.com</p>
+                                            </div>
+
+                                            <div class="address clearfix">
+                                                <p class="float-left icon pr-3"><i class="fas fa-home"></i></p>
+                                                <p class="text">123/NS Road, Kushtia, Khulna, Bangladesh.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- footer up single section -->
+
+                                <div class="col-md-4 mb-4">
+                                    <div class="news-letter">
+                                        <div class="footer-heading">
+                                            <h3 class="heading text-uppercase">newsletter</h3>
+                                        </div>
+
+                                        <div class="subscribe-from-wrap">
+                                            <p class="">Trust us! We will only send you promo!</p>
+                                            <form action="#" class="subs-form">
+                                                <div class="input-group">
+                                                    <input type="email" name="email" id="email"
+                                                        class="email-ip-box form-control">
+                                                    <button
+                                                        class="btn btn-success subs-btn input-group-append text-center"
+                                                        type="submit"><i
+                                                            class="fas fa-paper-plane mx-auto"></i></button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- footer up single section -->
+                            </div>
+                        </div>
+                        <!-- footer upper sectio end -->
+
+                        <div class="footer-down-wrapper">
+                            <div class="row">
+                                <div class="col-md-6 order-2 order-md-1">
+                                    <div class="copyright-section">
+                                        <p class="copyright">
+                                            Copyright &copy;<script>
+                                                document.write(new Date().getFullYear())
+                                            </script> All rights reserved | This template is made By <a href="#"
+                                                class="admin"><i class="fas fa-heart"></i>MHE</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- copyright sectio end -->
+
+                                <div class="col-md-6 order-md-2 mb-4">
+                                    <div class="social-wrapper">
+                                        <ul class="nav justify-content-center justify-content-md-end">
+                                            <li class="nav-item">
+                                                <a href="#" class="nav-link"><i class="fab fa-facebook-f"></i></a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="#" class="nav-link"><i class="fab fa-twitter"></i></a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="#" class="nav-link"><i class="fab fa-instagram"></i></a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="#" class="nav-link"><i class="fab fa-linkedin-in"></i></a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="#" class="nav-link"><i class="fab fa-youtube"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- social media sectio end -->
+                            </div>
+                        </div>
+                        <!-- footer down sectio end -->
+                    </div>
+                </div>
+                <!-- footer wrapper end -->
+
+            </footer>
+
+
+        </div>
+        <!-- container fluid end -->
+    </div>
+
+
+
+
+    <script src="lib/jquery/jquery-3.2.1.min.js"></script>
+    <script src="lib/jquery-ui/jquery-ui.js"></script>
+    <script src="lib/popper/popper.js"></script>
+    <script src="lib/bootstrap-4/js/bootstrap.js"></script>
+    <script src="lib/font-awesome/css/all.js"></script>
+    <script src="lib/Jquery-price-range/price_range_script.js"></script>
+
+    <!-- Main js file -->
+    <script src="app.js"></script>
+
+</body>
+
+</html>
