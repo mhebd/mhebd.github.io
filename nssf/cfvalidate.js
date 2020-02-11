@@ -4,6 +4,8 @@
  */
 //variabls
 const form = document.querySelector('.form');
+let inputs = document.querySelectorAll('input'),
+    message = document.querySelector('.message');
     
 
 
@@ -16,36 +18,40 @@ function events(){
 
 //functions
 function validate(e){
-    let fName = document.querySelector('.first-name'),
-    lName = document.querySelector('.last-name'),
-    email = document.querySelector('.email'),
-    phone = document.querySelector('.phone-number'),
-    subject = document.querySelector('.subject'),
-    message = document.querySelector('.message');
 
-    if(fName.value === '' ){
-        fName.style.borderColor = 'red';
-        e.preventDefault();
-    } 
-    if(lName.value === ''){
-        lName.style.borderColor = 'red';
-        e.preventDefault();
-    }
-    if(email.value === ''){
-        email.style.borderColor = 'red';
-        e.preventDefault();
-    }
-    if(phone.value === '' || isNaN(phone.value)){
-        phone.style.borderColor = 'red';
-        e.preventDefault();
-    } 
-    if(subject.value === ''){
-        subject.style.borderColor = 'red';
-        e.preventDefault();
-    }
-    if(message.value === ''){
-        message.style.borderColor = 'red';
-        e.preventDefault();
-    } 
-
+    inputs.forEach(function(input){
+        if(input.value === null || input.value === '' ){
+            input.style.borderBottom = '2px solid red';
+            e.preventDefault();
+        }
+        if(input.classList.contains('phone-number')){
+            if(input.value === '' || input.value === null || isNaN(input.value) ){
+                input.style.borderBottom = '2px solid red';
+                e.preventDefault();
+            }
+        }
+        if(input.type.toLowerCase() === 'email'){
+            let emailValu = input.value;
+            if(emailValu.indexOf('@') == -1 ){
+                input.style.borderBottom = '2px solid red';
+                e.preventDefault();
+            }
+        }
+        if(message.value === null || message.value === ''){
+            message.style.borderBottom = '2px solid red';
+            e.preventDefault();
+        }
+    })
 };
+
+
+
+inputs.forEach(function(input){
+    input.addEventListener('keyup', function(){
+        input.style.borderBottom = '1px solid #1bd41b';
+    })
+});
+
+message.addEventListener('keyup', function(){
+    message.style.borderBottom = '1px solid #1bd41b';
+})

@@ -97,7 +97,7 @@ function setIntoCart(itemInfo){
                 <img src="${itemInfo.image}" class="img-fluid" />
             </td>
             <td> 
-                <a href="checkout.html" class="checkout text-capitalize"  title="Check Out">${itemInfo.title}</a>
+                <h6  class="checkout text-uppercase text-success">${itemInfo.title}</h6>
             </td>
             <td> TK ${itemInfo.price} </td>
             <td>
@@ -161,7 +161,7 @@ function takeFromLS(){
                     <img src="${food.image}" class="img-fluid" />
                 </td>
                 <td> 
-                    <a href="checkout.html" class="checkout text-capitalize" title="Check Out">${food.title} </a>
+                    <h6  class="checkout text-uppercase text-success">${itemInfo.title}</h6>
                 </td>
                 <td>TK ${food.price} </td>
                 <td>
@@ -183,6 +183,12 @@ function removeAll(e){
 }
 
 
+
+
+
+
+
+//cart list badge
 setInterval(function(){
     let cartListN = getEmptyArry().length;
     cartBadge.innerText = cartListN;

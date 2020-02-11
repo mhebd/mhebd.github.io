@@ -164,9 +164,11 @@
                                                                 </tbody>
                                                             </table>
 
-                                                            <button
-                                                                class="btn btn-outline-success clear-all btn-block">Clear
-                                                                Cart</button>
+                                                            <div class="cart-btn">
+                                                                <a href="checkout.html" class="btn btn-success btn-block checkout-btn">Check Out</a>
+                                                                <button class="btn btn-success clear-all btn-block">Clear
+                                                                    Cart</button>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </li>
@@ -230,48 +232,7 @@
                 <div class="checkout-wrapper">
                     <div class="container">
                         <div class="checkout-item-info mb-4 mt-4">
-                            <div class="row">
-                                <div class="col-md-6 col-lg-4 mb-4">
-                                    <div class="item-img">
-                                        <img src="image/seeFood/1.jpg" alt="" class="img-fluid">
-                                    </div>
-                                </div>
-
-                                <div class="col-md-6 col-lg-8">
-                                    <div class="item-info">
-                                        <table class="table item-info-table">
-                                            <tbody>
-                                                <tr>
-                                                    <th>Name</th>
-                                                    <td>:</td>
-                                                    <td>This is food name</td>
-                                                </tr>
-                                                <tr>
-                                                    <th>Price</th>
-                                                    <td>:</td>
-                                                    <td>TK <span class="co-price">250</span></td>
-                                                </tr>
-                                                <tr>
-                                                    <th>ID</th>
-                                                    <td>:</td>
-                                                    <td>1001</td>
-                                                </tr>
-                                                <tr>
-                                                    <th>Quantity</th>
-                                                    <td>:</td>
-                                                    <td>
-                                                        <div class="quantity-box">
-                                                            <input type="button" value="-" class="quantity-prev btn btn-success">
-                                                            <input type="text" value="1" name="quantityN" id="" class="quantity-number">
-                                                            <input type="button" value="+" class="quantity-next btn btn-success">
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
+                           
                         </div>
                         <!-- checkout item-info end -->
 
@@ -280,124 +241,128 @@
 
 
                         <div class="customer-info mb-4">
-                            <div class="shipping-address">
-                                <form action="/" name="sform" class="form shipping-form" method="GET">
-                                    <div class="page-heading-wrapper">
-                                        <div class="container">
-                                            <div class="page-heading">
-                                                <h4 class="text-capitalize text-center">Shipping address</h4>
+                           <div class="row">
+                               <div class="col-lg-8 mx-auto">
+                                <div class="shipping-address">
+                                    <form action="/" name="sform" class="form shipping-form" method="GET">
+                                        <div class="page-heading-wrapper">
+                                            <div class="container">
+                                                <div class="page-heading">
+                                                    <h4 class="text-capitalize text-center">Shipping address</h4>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <!-- page headding wrapper end -->
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <input type="text" name="fname" class="form-control first-name" placeholder="First Name" >
-                                                <small>Example: Mehedi</small>
+                                        <!-- page headding wrapper end -->
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <input type="text" name="fname" class="form-control first-name required" placeholder="First Name" >
+                                                    <small>Example: Mehedi</small>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <input type="text" name="lname" class="form-control last-name required" placeholder="Last Name" >
+                                                    <small>Example: Hassan</small>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <input type="text" name="lname" class="form-control last-name" placeholder="Last Name" >
-                                                <small>Example: Hassan</small>
+    
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">@</span>
+                                                </div>
+                                                <input type="text" name="uname" class="form-control user-name required" placeholder="User Name" >
+                                            </div>
+                                            <small>Example: @mehedi1997</small>
+                                        </div>
+    
+                                        <div class="form-group">
+                                            <input type="email" name="email" id="" class="form-control email required" placeholder="Email Address" >
+                                            <small>Example: you@mail.com</small>
+                                        </div>
+    
+                                        <div class="form-group">
+                                            <input type="text" name="fnumber" class="form-control phone-number required" placeholder="Phone Number" >
+                                            <small>Example: +8801XXX-XXXXXX</small>
+                                        </div>
+    
+                                        <div class="form-group">
+                                            <input type="text" name="addr1" class="form-control address1 required" placeholder="Address Line 1" >
+                                            <small>Example: 123/NS Road Kushtia, Bangladesh.</small>
+                                        </div>
+    
+                                        <div class="form-group">
+                                            <input type="text" class="form-control address2"  placeholder="Address Line 2(Optional)">
+                                            <small>Example: 6th Floor At X Tower</small>
+                                        </div>
+    
+                                        <div class="page-heading-wrapper">
+                                            <div class="container">
+                                                <div class="page-heading">
+                                                    <h4 class="text-capitalize text-center">payment</h4>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text">@</span>
-                                            </div>
-                                            <input type="text" name="uname" class="form-control user-name" placeholder="User Name" >
+                                        <!-- page headding wrapper end -->
+    
+                                        <div class="form-check">
+                                            <input type="radio" name="payment" id="" class="form-check-input credit-card" value="credit" checked>
+                                            <label for="credit" class="form-check-label">Credit Card</label>
                                         </div>
-                                        <small>Example: @mehedi1997</small>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <input type="email" name="email" id="" class="form-control email" placeholder="Email Address" >
-                                        <small>Example: you@mail.com</small>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <input type="text" name="fnumber" class="form-control phone-number" placeholder="Phone Number" >
-                                        <small>Example: +8801XXX-XXXXXX</small>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <input type="text" name="addr1" class="form-control address1" placeholder="Address Line 1" >
-                                        <small>Example: 123/NS Road Kushtia, Bangladesh.</small>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <input type="text" class="form-control address2" placeholder="Address Line 2(Optional)">
-                                        <small>Example: 6th Floor At X Tower</small>
-                                    </div>
-
-                                    <div class="page-heading-wrapper">
-                                        <div class="container">
-                                            <div class="page-heading">
-                                                <h4 class="text-capitalize text-center">payment</h4>
+    
+                                        <div class="form-check">
+                                            <input type="radio" name="payment" id=""  class="form-check-input debit-card" value="debit-card">
+                                            <label for="debit" class="form-check-label">Debit Card</label>
+                                        </div>
+    
+                                        <div class="form-check mb-4">
+                                            <input type="radio" name="payment" id=""  class="form-check-input paypal" value="paypal">
+                                            <label for="debit" class="form-check-label">PayPal</label>
+                                        </div>
+    
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <input type="text" name="cname" class="form-control name-on-card required" placeholder="Name On Card" >
+                                                    <small>Example: Mehedi Hassan Emon</small>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <input type="text" name="cnumber" class="form-control card-number required" placeholder="Your Card Number" >
+                                                    <small>Example: 17061997420007</small>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <!-- page headding wrapper end -->
-
-                                    <div class="form-check">
-                                        <input type="radio" name="payment" id="" class="form-check-input credit-card" value="credit" checked>
-                                        <label for="credit" class="form-check-label">Credit Card</label>
-                                    </div>
-
-                                    <div class="form-check">
-                                        <input type="radio" name="payment" id=""  class="form-check-input debit-card" value="debit-card">
-                                        <label for="debit" class="form-check-label">Debit Card</label>
-                                    </div>
-
-                                    <div class="form-check mb-4">
-                                        <input type="radio" name="payment" id=""  class="form-check-input paypal" value="paypal">
-                                        <label for="debit" class="form-check-label">PayPal</label>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <input type="text" name="cname" class="form-control name-on-card" placeholder="Name On Card" >
-                                                <small>Example: Mehedi Hassan Emon</small>
+    
+                                        <div class="row mb-4">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <input type="date" class="form-control expiration" required>
+                                                    <small>Expiration Date</small>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <input type="password" name="cpass" class="form-control security-code required" placeholder="Security Code" >
+                                                    <small>Security Code Of Your Card</small>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <input type="text" name="cnumber" class="form-control card-number" placeholder="Your Card Number" >
-                                                <small>Example: 17061997420007</small>
+    
+                                        
+                                        <div class="row">
+                                            <div class="col-md-6 mx-auto">
+                                                <input type="submit" value="Continue Shipping" class="btn btn-success btn-block">
                                             </div>
                                         </div>
-                                    </div>
-
-                                    <div class="row mb-4">
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <input type="date" class="form-control expiration" required>
-                                                <small>Expiration Date</small>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <input type="password" name="cpass" class="form-control security-code" placeholder="Security Code" >
-                                                <small>Security Code Of Your Card</small>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    
-                                    <div class="row">
-                                        <div class="col-md-6 mx-auto">
-                                            <input type="submit" value="Continue Shipping" class="btn btn-success btn-block">
-                                        </div>
-                                    </div>
-
-                                </form>
-                            </div>
+    
+                                    </form>
+                                </div>
+                               </div>
+                           </div>
                         </div>
                         <!-- checkout customer info end -->
                     </div>
@@ -549,7 +514,6 @@
     <script src="lib/jquery/jquery-3.2.1.min.js"></script>
     <script src="lib/popper/popper.js"></script>
     <script src="lib/bootstrap-4/js/bootstrap.js"></script>
-    <script src="lib/parallax/parallax.js"></script>
     <script src="lib/font-awesome/css/all.js"></script>
 
     <!-- Main js file -->
