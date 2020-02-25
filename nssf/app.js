@@ -161,7 +161,6 @@ function takeFromLS(){
                     <img src="${food.image}" class="img-fluid" />
                 </td>
                 <td> 
-                    <h6  class="checkout text-uppercase text-success">${itemInfo.title}</h6>
                 </td>
                 <td>TK ${food.price} </td>
                 <td>
