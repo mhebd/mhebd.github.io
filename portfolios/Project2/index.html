@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>One page Freelancer site.</title>
+
+    <!-- Stylesheet link -->
+    <link rel="stylesheet" href="../lib/bootstrap-4/css/bootstrap.css">
+
+    <link rel="stylesheet" href="../lib/AOS/aos.css">
+
+    <link rel="stylesheet" href="../lib/simple-line-icons/css/simple-line-icons.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-spy="scroll" data-target="#top-nav" data-offset="75">
+
+    <nav>
+        <div class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="top-nav">
+            <div class="container">
+                <div class="navbar-brand">
+                    <h2 class="text-light font-weight-bold text-uppercase">freelancer</h2>
+                </div>
+
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#main-menu">
+                    <span class="navbar-toggler-icon"></span>
+                    <span class="sr-only">navbar togglet icon</span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a href="#portfolio" class="nav-link text-uppercase font-weight-bold">portfolio</a></li>
+                        <li class="nav-item"><a href="#about" class="nav-link text-uppercase font-weight-bold">about</a></li>
+                        <li class="nav-item"><a href="#contact" class="nav-link text-uppercase font-weight-bold">contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="bg-primary mt-4 d-flex flex-column justify-content-center align-items-center" style="width:100%;height: 100vh;">
+        <div class="container">
+            <div class="d-flex flex-column justify-content-center align-items-center">
+                <img src="../image/profile-1.jpg" alt="" class="img-fluid mb-4 mx-auto p-2 bg-info rounded-circle d-block" style="width:200px;height:200px; object-fit: cover;" data-aos="zoom-in">
+
+                <div class="display-3 font-weight-bold text-uppercase text-light" data-aos="fade-up">
+                    freelancer
+                </div>
+                <div class="devider my-4" data-aos="fade-up">
+                    <div class="devider-line line-left" style="background:white;"></div>
+                    <div class="devider-img text-light">🎇</div>
+                    <div class="devider-line line-right" style="background:white;"></div>
+                </div>
+                <p class="text-light" data-aos="fade-up">Graphic Artist - Web Designer - Illustrator</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-light py-5" id="portfolio">
+        <div class="container my-4">
+            <div class="text-center my-2">
+                <div class="display-3 text-black-50 font-weight-bold text-uppercase">
+                    portfolio
+                </div>
+            </div>
+
+            <div class="devider mb-3">
+                <div class="devider-line line-left"></div>
+                <div class="devider-img">🎇</div>
+                <div class="devider-line line-right"></div>
+            </div>
+                
+            <div class="row">
+                <div class="col-md-6 col-lg-4 mb-4 portfolios" data-toggle="modal" data-target="#modal-1">
+                    <div class="portfolio">
+                        <img src="../image/slider-1.jpg" alt="" class="img-fluid rounded">
+                    </div>
+                </div>
+                <div class="modal fade" id="modal-1">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button class="close" data-dismiss="modal">
+                                    <span>&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="../image/slider-1.jpg" alt="" class="img-fluid rounded">
+                            </div>
+                            <div class="modal-footer">
+                                <button class="close" data-dismiss="modal">Close</button>
+                                <button class="btn btn-info">Download</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4 portfolios" data-toggle="modal" data-target="#modal-2">
+                    <div class="portfolio">
+                        <img src="../image/slider-2.jpg" alt="" class="img-fluid rounded">
+                    </div>
+                </div>
+                <div class="modal fade" id="modal-2">
+                        <div class="modal-dialog modal-dialog-centered modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button class="close" data-dismiss="modal">
+                                        <span>&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="../image/slider-2.jpg" alt="" class="img-fluid rounded">
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="close" data-dismiss="modal">Close</button>
+                                    <button class="btn btn-info">Download</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <div class="col-md-6 col-lg-4 mb-4 portfolios" data-toggle="modal" data-target="#modal-3">
+                    <div class="portfolio">
+                        <img src="../image/slider-3.jpg" alt="" class="img-fluid rounded">
+                    </div>
+                </div>
+                <div class="modal fade" id="modal-3">
+                        <div class="modal-dialog modal-dialog-centered modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button class="close" data-dismiss="modal">
+                                        <span>&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="../image/slider-3.jpg" alt="" class="img-fluid rounded">
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="close" data-dismiss="modal">Close</button>
+                                    <button class="btn btn-info">Download</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <div class="col-md-6 col-lg-4 mb-4 portfolios" data-toggle="modal" data-target="#modal-4">
+                    <div class="portfolio">
+                        <img src="../image/slider-4.jpg" alt="" class="img-fluid rounded">
+                    </div>
+                </div>
+                <div class="modal fade" id="modal-4">
+                        <div class="modal-dialog modal-dialog-centered modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button class="close" data-dismiss="modal">
+                                        <span>&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="../image/slider-4.jpg" alt="" class="img-fluid rounded">
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="close" data-dismiss="modal">Close</button>
+                                    <button class="btn btn-info">Download</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <div class="col-md-6 col-lg-4 mb-4 portfolios" data-toggle="modal" data-target="#modal-5">
+                    <div class="portfolio">
+                        <img src="../image/slider-5.jpg" alt="" class="img-fluid rounded">
+                    </div>
+                </div>
+                <div class="modal fade" id="modal-5">
+                        <div class="modal-dialog modal-dialog-centered modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button class="close" data-dismiss="modal">
+                                        <span>&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="../image/slider-5.jpg" alt="" class="img-fluid rounded">
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="close" data-dismiss="modal">Close</button>
+                                    <button class="btn btn-info">Download</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <div class="col-md-6 col-lg-4 mb-4 portfolios" data-toggle="modal" data-target="#modal-6">
+                    <div class="portfolio">
+                        <img src="../image/slider-1.jpg" alt="" class="img-fluid rounded">
+                    </div>
+                </div>
+                <div class="modal fade" id="modal-6">
+                        <div class="modal-dialog modal-dialog-centered modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button class="close" data-dismiss="modal">
+                                        <span>&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="../image/slider-1.jpg" alt="" class="img-fluid rounded">
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="close" data-dismiss="modal">Close</button>
+                                    <button class="btn btn-info">Download</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-primary py-5" id="about">
+        <div class="container py-5">
+            <div class="text-center py-2">
+                <div class="display-3 font-weight-bold text-light text-uppercase" data-aos="fade-up">
+                    about
+                </div>
+                <div class="devider mb-4" data-aos="fade-up">
+                    <div class="devider-line line-left" style="background:white;"></div>
+                    <div class="devider-img text-light">🎇</div>
+                    <div class="devider-line line-right" style="background:white;"></div>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-5">
+                        <p class="text-light text-left" data-aos="fade-right">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad explicabo facilis accusantium harum recusandae impedit, a, similique, reiciendis distinctio sint earum. Officia eligendi molestiae voluptas commodi debitis aliquam, officiis illo. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero neque a explicabo!
+                        </p>
+                    </div>
+                    <div class="col-lg-5 text-left" data-aos="fade-left">
+                        <p class="text-light">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus ipsa magnam voluptatem quibusdam voluptate, animi ipsam quam nobis corporis reiciendis sunt ullam quasi quia nisi, cum, laboriosam autem enim perferendis.</p>
+                    </div>
+                </div>
+
+                <div class="justify-content-center my-5" data-aos="zoom-in">
+                    <button class="btn btn-outline-light btn-lg" style="padding:1.2rem 2rem;">🎁 Download!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-light py-5" id="contact">
+        <div class="text-center mt-5">
+            <div class="display-3 text-uppercase font-weight-bold text-black-50">
+                Contact me
+            </div>
+            <div class="devider mb-3">
+                <div class="devider-line line-left"></div>
+                <div class="devider-img">🎇</div>
+                <div class="devider-line line-right"></div>
+            </div>
+        </div>
+        <div class="container my-5">
+            <form action="" class="form-group p-lg-5">
+                <input type="text" class="form-control mb-2 pb-3" placeholder="Name">
+                <input type="email" name="" id="" class="form-control mb-2 pb-3" placeholder="Email Address">
+                <input type="text" name="" id="" class="form-control mb-2 pb-3" placeholder="Phone Number">
+                <textarea name="" id="" cols="" rows="8" class="col-12 mb-3" placeholder="Message"></textarea>
+
+                <button type="submit" class="btn btn-outline-primary btn-lg">SEND</button>
+            </form>
+        </div>
+    </div>
+    
+    <div class="bg-dark py-5">
+        <div class="container">
+            <div class="row py-4">
+                <div class="col-md-4 text-center" data-aos="fade-right">
+                    <h3 class="text-light text-uppercase font-weight-bold mb-4">
+                        location
+                    </h3>
+                    <p class="text-white-50">
+                        123/A NS Road Kushtia.
+                        Kushtia-7000, Bangladesh.
+                    </p>
+                </div>
+
+                <div class="col-md-4 text-center" data-aos="fade-up">
+                    <h3 class="text-light text-uppercase font-weight-bold mb-4">
+                        Around the Web
+                    </h3>
+                    <ul class="nav social justify-content-center">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link"><i class="fab fa-facebook-f"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link"><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link"><i class="fab fa-instagram"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link"><i class="fab fa-linkedin-in"></i></a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 text-center" data-aos="fade-left">
+                    <h3 class="text-light text-uppercase font-weight-bold mb-4">
+                        About Freelancer
+                    </h3>
+                    <p class="text-white-50">
+                        Freelance is a free to use, MIT licensed Bootstrap theme created by <a href="#">M H EMON</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container text-center">
+            <p class="text-light py-3">
+                Copyright &copy; Your Website 2019
+            </p>
+        </div>
+    </div>
+
+
+<!-- ______________________________________________________________________ -->
+    <!-- Javascript file links -->
+    <script src="../lib/jquery/jquery.min.js"></script>
+    <script src="../lib/bootstrap-4/js/bootstrap.js"></script>
+    <script src="../lib/AOS/aos.js"></script>
+    <script src="../lib/parallax/parallax.js"></script>
+    <script src="../lib/font-awesome/css/all.js"></script>
+
+    <!-- Js codes -->
+    <script>
+        AOS.init({
+            duration:600,
+        });
+    </script>
+
+    <!-- scroll spy -->
+        <script>
+            $(function() {
+              var topoffset = 70; //variable for menu height
+    
+              //Use smooth scrolling when clicking on navigation
+              $('.navbar-nav a').click(function() {
+                if (location.pathname.replace(/^\//,'') === 
+                  this.pathname.replace(/^\//,'') && 
+                  location.hostname === this.hostname) {
+                  var target = $(this.hash);
+                  target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                  if (target.length) {
+                    $('html,body').animate({
+                      scrollTop: target.offset().top-topoffset
+                    }, 500);
+                    return false;
+                  } //target.length
+                } //click function
+              }); //smooth scrolling
+    
+            });		
+        </script>
+        <!-- On scrollin effect -->
+        <script>
+        	function Scroll() {
+                var top = document.getElementById('top-nav');
+                var ypos = window.pageYOffset;
+                if (ypos > 500) {
+                        top.classList.add('srink');
+                } else {
+                    top.classList.remove('srink');
+                }
+        	}
+        	window.addEventListener("scroll", Scroll);
+    	</script>
+    
+</body>
+</html>

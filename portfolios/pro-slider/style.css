@@ -1,0 +1,15 @@
+.btn-outline-tomato{
+    color: tomato;
+    border-color: tomato;
+    transition: .3s;
+}
+.btn-outline-tomato:hover{
+    color: rgb(255, 255, 255);
+    background: tomato;
+}
+.parallax{
+    z-index: -1;
+    width:100%;
+    height: 500px;
+    font-size: 1.5em;
+}

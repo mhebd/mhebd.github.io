@@ -1,0 +1,30 @@
+
+
+.agent-grid-header{
+    margin-bottom: 4rem;
+}
+
+.agent-grid-header .header{
+    padding:1rem 2rem;
+    border-left:3px solid #28a745;
+}
+.agent-grid-header .header .heading{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 2.6rem;
+    font-weight: 700;
+}
+.agent-grid-header .header .header-prg{
+    font-size: 1.25rem;
+}
+.agent-grid-header .breadcrumb{
+    background: transparent;
+}
+.agent-grid-header .breadcrumb a{
+    color:#6c757d;
+    transition: .3s;
+}
+.agent-grid-header .breadcrumb a:hover{
+    color:#28a745;
+}
+
+
