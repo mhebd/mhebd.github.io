@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript Calculator</title>
+    <!-- style sheets -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../lib/bootstrap-4/css/bootstrap.css">
+
+</head>
+
+<body>
+
+    <div class="container-wrapper">
+        <div class="container-fluid">
+            <div class="container">
+                <div class="calculator-wrapper pt-4">
+                    <div class="row">
+                        <div class="col-md-6 mx-auto">
+                            <div class="calculator card">
+                                <form action="" class="form" name="form">
+                                    <div class="display-wrapper">
+                                        <input type="text" name="display" id="display" class="display" value="" placeholder="............EMON...........">
+                                        <div class="dateNtime my-2">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <div class="date d-flex justify-content-center"></div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="tiem d-flex justify-content-center"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="button">
+                                        <div class="result-btn-wrapper pb-4">
+                                            <div class="row">
+                                                <div class="col-9">
+                                                    <button class="btn res-btn" value="4">A+</button>
+                                                    <button class="btn res-btn" value="3.75">A</button>
+                                                    <button class="btn res-btn" value="3.50">A-</button>
+                                                    <button class="btn res-btn" value="3.25">B+</button>
+                                                    <button class="btn res-btn" value="3">B</button>
+                                                    <button class="btn res-btn" value="2.75">B-</button>
+                                                    <button class="btn res-btn" value="2.50">C+</button>
+                                                    <button class="btn res-btn" value="2.25">C</button>
+                                                    <button class="btn res-btn" value="2">D</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-9">
+                                                <input type="button" value="1" class="number">
+                                                <input type="button" value="2" class="number">
+                                                <input type="button" value="3" class="number">
+                                                <input type="button" value="4" class="number">
+                                                <input type="button" value="5" class="number">
+                                                <input type="button" value="6" class="number">
+                                                <input type="button" value="7" class="number">
+                                                <input type="button" value="8" class="number">
+                                                <input type="button" value="9" class="number">
+                                                <input type="button" value="DEL" class="delete">
+                                                <input type="button" value="0" class="number">
+                                                <input type="button" value="." class="number">
+                                            </div>
+                                            <div class="col-3">
+                                                <input type="button" value="C" class="clear">
+                                                <input type="button" value="/" class="oparetor">
+                                                <input type="button" value="*" class="oparetor">
+                                                <input type="button" value="-" class="oparetor">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12 d-flex justify-content-between pt-3">
+                                                <input type="button" value="=" class="equalSign">
+                                                <input type="button" value="+" class="oparetor plus">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

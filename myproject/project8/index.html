@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Estate Agency Online Business Site.</title>
+
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+
+    <!-- fevicon -->
+    <link rel="shortcut icon" href="../image/fev-icon.png" type="image/x-icon">
+    <!-- others css file -->
+    <link rel="stylesheet" href="../lib/bootstrap-4/css/bootstrap.css">
+    <link rel="stylesheet" href="../lib/animate/animate.css">
+    <link rel="stylesheet" href="../lib/AOS/aos.css">
+
+    <!-- owl carousel css file -->
+    <link rel="stylesheet" href="../lib/OwlCarousel2/css/owl.carousel.css">
+    <link rel="stylesheet" href="../lib/OwlCarousel2/css/owl.theme.default.css">
+
+    <!-- main css file -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="container-wrapper bg-white">
+        <!-- main design @start -->
+        <div id="top"></div>
+
+        <!-- search box start -->
+        <div class="search-box-wrapper">
+            <div class="serch-box-header section-header">
+                <h2 class="heading">Search Property</h2>
+                <div class="h-border-bottom"></div>
+                <button id="btn-close"><i class="fas fa-times"></i></button>
+            </div>
+
+            <div class="search-form-wrapper">
+                <div class="container">
+                    <form action="">
+                        <div class="form-group">
+                            <label for="">Keyword</label>
+                            <input type="text" class="form-control" placeholder="keyword">
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">Type</label>
+                                    <select name="" id="" class="form-control">
+                                        <option value="">All Type</option>
+                                        <option value="">For Rent</option>
+                                        <option value="">For Sell</option>
+                                        <option value="">Open House</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">City</label>
+                                    <select name="" id="" class="form-control">
+                                        <option value="">All City</option>
+                                        <option value="">Dhaka</option>
+                                        <option value="">Kushtia</option>
+                                        <option value="">Khulna</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">Bedrooms</label>
+                                    <select name="" id="" class="form-control">
+                                        <option value="">Any</option>
+                                        <option value="">01</option>
+                                        <option value="">02</option>
+                                        <option value="">03</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">Garages</label>
+                                    <select name="" id="" class="form-control">
+                                        <option value="">Any</option>
+                                        <option value="">01</option>
+                                        <option value="">02</option>
+                                        <option value="">03</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">Bathrooms</label>
+                                    <select name="" id="" class="form-control">
+                                        <option value="">Any</option>
+                                        <option value="">01</option>
+                                        <option value="">02</option>
+                                        <option value="">03</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">Min Price</label>
+                                    <select name="" id="" class="form-control">
+                                        <option value="">Unlimite</option>
+                                        <option value="">$50,000</option>
+                                        <option value="">$100,000</option>
+                                        <option value="">$150,000</option>
+                                        <option value="">$200,000</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-success search-submit">Search Property</button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- search box end -->
+
+        <!-- navigation start -->
+        <nav class="navbar navbar-expand-lg bg-light fixed-top top-navigation" id="top-nav">
+            <div class="container">
+                <!-- navbar toggler -->
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#mainMenu">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <!-- navbar brand -->
+                <div class="navbar-brand">
+                    <h2 class="brand-name">
+                        <a href="#">
+                            <span class="name-left">Estate</span><span class="name-right text-success">Agency</span>
+                        </a>
+                    </h2>
+                </div>
+
+                <!-- main menu -->
+                <div class="collapse navbar-collapse" id="mainMenu">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item"><a href="#" class="nav-link active">Home</a></li>
+                        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                        <li class="nav-item"><a href="property-gride.html" class="nav-link">Property</a></li>
+                        <li class="nav-item"><a href="news-grid.html" class="nav-link">Blog</a></li>
+                        <!-- dropdown -->
+                        <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle"
+                                data-toggle="dropdown">Pages</a>
+                            <div class="dropdown-menu">
+                                <a href="property-single.html" class="dropdown-item">Property Single</a>
+                                <a href="news-single.html" class="dropdown-item">Blog Single</a>
+                                <a href="agent-single.html" class="dropdown-item">Agents Single</a>
+                                <a href="agent-grid.html" class="dropdown-item">Agents Grid</a>
+                            </div>
+                        </li>
+                        <li class="nav-item"><a href="contact.html" class="nav-link">contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- search icon -->
+                <button class="search-icon-btn btn btn-success">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </nav>
+        <!-- navigation end -->
+
+        <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+
+        <!-- home page carousel -->
+        <div class="container-fluid">
+            <div class="home-carousel-wrapper">
+                <div id="main-carousel" class="carousel slide" data-ride="carousel">
+                    <!-- carousel indicators -->
+                    <ul class="carousel-indicators">
+                        <li data-target="#main-carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#main-carousel" data-slide-to="1"></li>
+                        <li data-target="#main-carousel" data-slide-to="2"></li>
+                    </ul>
+
+                    <!-- carousel inner -->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="../image/proparty-img/slide-1.jpg" alt="" class="img-fluid">
+
+                            <div class="carousel-caption">
+                                <h4 class="address mb-5 animated zoomIn delay-3s">
+                                    <p>Dolar,Florida</p>
+                                    <p>78432</p>
+                                </h4>
+
+                                <h2 class="property-name mb-5 animated zoomIn delay-2s">
+                                    <span class="text-success">204</span> rino <br> venda road five
+                                </h2>
+
+                                <h3 class="rent animated slideInUp delay-2s">RENT | $ 12,000</h3>
+                            </div>
+                        </div>
+                        <!-- single slide end -->
+                        <div class="carousel-item">
+                            <img src="../image/proparty-img/slide-2.jpg" alt="" class="img-fluid">
+
+                            <div class="carousel-caption">
+                                <h4 class="address mb-5 animated zoomIn delay-3s">
+                                    <p>Dolar,Florida</p>
+                                    <p>78432</p>
+                                </h4>
+
+                                <h2 class="property-name mb-5 animated zoomIn delay-2s">
+                                    <span class="text-success">204</span> rino <br> venda road five
+                                </h2>
+
+                                <h3 class="rent animated slideInUp delay-2s">RENT | $ 12,000</h3>
+                            </div>
+                        </div>
+                        <!-- single slide end -->
+                        <div class="carousel-item">
+                            <img src="../image/proparty-img/slide-3.jpg" alt="" class="img-fluid">
+
+                            <div class="carousel-caption">
+                                <h4 class="address mb-5 animated zoomIn delay-3s">
+                                    <p>Dolar,Florida</p>
+                                    <p>78432</p>
+                                </h4>
+
+                                <h2 class="property-name mb-5 animated zoomIn delay-2s">
+                                    <span class="text-success">204</span> rino <br> venda road five
+                                </h2>
+
+                                <h3 class="rent animated slideInUp delay-2s">RENT | $ 12,000</h3>
+                            </div>
+                        </div>
+                        <!-- single slide end -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- home page carousel end -->
+
+
+        <!-- services section  -->
+        <div class="section services-wrapper">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="heading">Our Services</h2>
+                </div>
+
+                <div class="services">
+                    <div class="row">
+                        <div class="col-lg-4 mb-4">
+                            <div class="service wow zoomIn">
+                                <div class="service-header d-flex mb-4">
+                                    <div class="service-icon">
+                                        <i class="fas fa-gamepad"></i>
+                                    </div>
+                                    <div class="s-heading align-self-center">
+                                        <h2 class="">Lifestyle</h2>
+                                    </div>
+                                </div>
+
+                                <p class="service-prg lead">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                    Sint cupiditate dolor vitae consequuntur accusantium impedit enim eos dolores
+                                    repudiandae? Dolore voluptatum commodi mollitia vel eos assumenda reprehenderit,
+                                    error ipsa porro!</p>
+
+                                <a href="#" class="service-link">Read More &MediumSpace; <i
+                                        class="fas fa-angle-right"></i></a>
+                            </div>
+                        </div>
+                        <!-- single service end -->
+                        <div class="col-lg-4 mb-4">
+                            <div class="service wow zoomIn">
+                                <div class="service-header d-flex mb-4">
+                                    <div class="service-icon">
+                                        <i class="fas fa-dollar-sign"></i>
+                                    </div>
+                                    <div class="s-heading align-self-center">
+                                        <h2 class="">Loans</h2>
+                                    </div>
+                                </div>
+
+                                <p class="service-prg lead">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                    Sint cupiditate dolor vitae consequuntur accusantium impedit enim eos dolores
+                                    repudiandae? Dolore voluptatum commodi mollitia vel eos assumenda reprehenderit,
+                                    error ipsa porro!</p>
+
+                                <a href="#" class="service-link">Read More &MediumSpace; <i
+                                        class="fas fa-angle-right"></i></a>
+                            </div>
+                        </div>
+                        <!-- single service end -->
+                        <div class="col-lg-4 mb-4">
+                            <div class="service wow zoomIn">
+                                <div class="service-header d-flex mb-4">
+                                    <div class="service-icon">
+                                        <i class="fas fa-home"></i>
+                                    </div>
+                                    <div class="s-heading align-self-center">
+                                        <h2 class="">Sell</h2>
+                                    </div>
+                                </div>
+
+                                <p class="service-prg lead">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                    Sint cupiditate dolor vitae consequuntur accusantium impedit enim eos dolores
+                                    repudiandae? Dolore voluptatum commodi mollitia vel eos assumenda reprehenderit,
+                                    error ipsa porro!</p>
+
+                                <a href="#" class="service-link">Read More &MediumSpace; <i
+                                        class="fas fa-angle-right"></i></a>
+                            </div>
+                        </div>
+                        <!-- single service end -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- services section @end -->
+
+
+        <!-- home page owl carousle -->
+        <div class="section property-carousel-wrapper">
+            <div class="container">
+                <div class="section-header clearfix">
+                    <h2 class="heading float-left">Latest Properties</h2>
+                    <h3 class="more-properties float-right"><a href="property-gride.html" class="link">All Property <i
+                                class="fas fa-angle-right ml-3"></i></a></h3>
+                </div>
+                <div class="slider-wrapper">
+                    <!-- carousel start -->
+                    <div class="owl-carousel owl-theme property-carousel">
+                        <div class="item">
+                            <div class="single-property">
+                                <div class="card">
+                                    <img src="../image/proparty-img/property-9.jpg" alt="" class="card-img">
+
+                                    <div class="property-caption">
+                                        <div class="information">
+                                            <h2 class="address">206 Mount Olive Road Two</h2>
+                                            <h4 class="rent">RENT | $ 12,000</h4>
+                                            <a href="#" class="link">Click here to view <i
+                                                    class="fas fa-angle-right ml-3"></i></a>
+                                        </div>
+
+                                        <div class="extra-info">
+                                            <div class="info-table">
+                                                <table class="table bg-success">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Area</th>
+                                                            <th>Beds</th>
+                                                            <th>Baths</th>
+                                                            <th>Garages</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>340m<sup>2</sup></td>
+                                                            <td>2</td>
+                                                            <td>4</td>
+                                                            <td>1</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- single item end -->
+                        <div class="item">
+                            <div class="single-property">
+                                <div class="card">
+                                    <img src="../image/proparty-img/property-6.jpg" alt="" class="card-img">
+
+                                    <div class="property-caption">
+                                        <div class="information">
+                                            <h2 class="address">206 Mount Olive Road Two</h2>
+                                            <h4 class="rent">RENT | $ 12,000</h4>
+                                            <a href="#" class="link">Click here to view <i
+                                                    class="fas fa-angle-right ml-3"></i></a>
+                                        </div>
+
+                                        <div class="extra-info">
+                                            <div class="info-table">
+                                                <table class="table bg-success">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Area</th>
+                                                            <th>Beds</th>
+                                                            <th>Baths</th>
+                                                            <th>Garages</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>340m<sup>2</sup></td>
+                                                            <td>2</td>
+                                                            <td>4</td>
+                                                            <td>1</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- single item end -->
+                        <div class="item">
+                            <div class="single-property">
+                                <div class="card">
+                                    <img src="../image/proparty-img/property-7.jpg" alt="" class="card-img">
+
+                                    <div class="property-caption">
+                                        <div class="information">
+                                            <h2 class="address">206 Mount Olive Road Two</h2>
+                                            <h4 class="rent">RENT | $ 12,000</h4>
+                                            <a href="#" class="link">Click here to view <i
+                                                    class="fas fa-angle-right ml-3"></i></a>
+                                        </div>
+
+                                        <div class="extra-info">
+                                            <div class="info-table">
+                                                <table class="table bg-success">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Area</th>
+                                                            <th>Beds</th>
+                                                            <th>Baths</th>
+                                                            <th>Garages</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>340m<sup>2</sup></td>
+                                                            <td>2</td>
+                                                            <td>4</td>
+                                                            <td>1</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- single item end -->
+                        <div class="item">
+                            <div class="single-property">
+                                <div class="card">
+                                    <img src="../image/proparty-img/property-8.jpg" alt="" class="card-img">
+
+                                    <div class="property-caption">
+                                        <div class="information">
+                                            <h2 class="address">206 Mount Olive Road Two</h2>
+                                            <h4 class="rent">RENT | $ 12,000</h4>
+                                            <a href="#" class="link">Click here to view <i
+                                                    class="fas fa-angle-right ml-3"></i></a>
+                                        </div>
+
+                                        <div class="extra-info">
+                                            <div class="info-table">
+                                                <table class="table bg-success">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Area</th>
+                                                            <th>Beds</th>
+                                                            <th>Baths</th>
+                                                            <th>Garages</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>340m<sup>2</sup></td>
+                                                            <td>2</td>
+                                                            <td>4</td>
+                                                            <td>1</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- single item end -->
+                    </div>
+
+                    <!-- carousel end -->
+                </div>
+            </div>
+        </div>
+        <!-- home page owl carousle end -->
+
+
+
+
+        <!-- home page agents section -->
+        <div class="section agents">
+            <div class="container">
+                <div class="section-header clearfix">
+                    <h2 class="heading float-left">Best Agents</h2>
+                    <h3 class="float-right"><a href="agent-grid.html" class="link">All Agents <i
+                                class="fas fa-angle-right ml-3"></i></a></h3>
+                </div>
+
+                <div class="agents-wrapper">
+                    <div class="row">
+                        <div class="col-md-4 mb-4">
+                            <div class="single-agent card">
+                                <img src="../image/proparty-img/agent-5.jpg" alt="" class="card-img">
+                                <div class="agent-overlay card-img-overlay">
+                                    <div class="agent-info">
+                                        <h2 class="agent-name"><a href="#">Margaret Sotillo Escala</a></h2>
+                                        <p class="agent-prg">Sed porttitor lectus nibh, Cras ultricies ligula sed magna
+                                            dictum porta two. </p>
+
+                                        <p class="agent-phone"><strong>Phone:</strong> +54 356 945234</p>
+                                        <p class="agent-email"><strong>Email:</strong> agents@example.com</p>
+
+                                        <ul class="nav  social-nav">
+                                            <li class="nav-item"><a href="#" class="nav-link"><i
+                                                        class="fab fa-facebook-f"></i></a></li>
+                                            <li class="nav-item"><a href="#" class="nav-link"><i
+                                                        class="fab fa-twitter"></i></a></li>
+                                            <li class="nav-item"><a href="#" class="nav-link"><i
+                                                        class="fab fa-instagram"></i></a></li>
+                                            <li class="nav-item"><a href="#" class="nav-link"><i
+                                                        class="fab fa-pinterest-p"></i></a></li>
+                                            <li class="nav-item"><a href="#" class="nav-link"><i
+                                                        class="fab fa-linkedin-in"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- single agent end -->
+                        <div class="col-md-4 mb-4">
+                            <div class="single-agent card">
+                                <img src="../image/proparty-img/agent-6.jpg" alt="" class="card-img">
+                                <div class="agent-overlay card-img-overlay">
+                                    <div class="agent-info">
+                                        <h2 class="agent-name"><a href="#">Margaret Sotillo Escala</a></h2>
+                                        <p class="agent-prg">Sed porttitor lectus nibh, Cras ultricies ligula sed magna
+                                            dictum porta two. </p>
+
+                                        <p class="agent-phone"><strong>Phone:</strong> +54 356 945234</p>
+                                        <p class="agent-email"><strong>Email:</strong> agents@example.com</p>
+
+                                        <ul class="nav  social-nav">
+                                            <li class="nav-item"><a href="#" class="nav-link"><i
+                                                        class="fab fa-facebook-f"></i></a></li>
+                                            <li class="nav-item"><a href="#" class="nav-link"><i
+                                                        class="fab fa-twitter"></i></a></li>
+                                            <li class="nav-item"><a href="#" class="nav-link"><i
+                                                        class="fab fa-instagram"></i></a></li>
+                                            <li class="nav-item"><a href="#" class="nav-link"><i
+                                                        class="fab fa-pinterest-p"></i></a></li>
+                                            <li class="nav-item"><a href="#" class="nav-link"><i
+                                                        class="fab fa-linkedin-in"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- single agent end -->
+                        <div class="col-md-4 mb-4">
+                            <div class="single-agent card">
+                                <img src="../image/proparty-img/agent-7.jpg" alt="" class="card-img">
+                                <div class="agent-overlay card-img-overlay">
+                                    <div class="agent-info">
+                                        <h2 class="agent-name"><a href="#">Margaret Sotillo Escala</a></h2>
+                                        <p class="agent-prg">Sed porttitor lectus nibh, Cras ultricies ligula sed magna
+                                            dictum porta two. </p>
+
+                                        <p class="agent-phone"><strong>Phone:</strong> +54 356 945234</p>
+                                        <p class="agent-email"><strong>Email:</strong> agents@example.com</p>
+
+                                        <ul class="nav  social-nav">
+                                            <li class="nav-item"><a href="#" class="nav-link"><i
+                                                        class="fab fa-facebook-f"></i></a></li>
+                                            <li class="nav-item"><a href="#" class="nav-link"><i
+                                                        class="fab fa-twitter"></i></a></li>
+                                            <li class="nav-item"><a href="#" class="nav-link"><i
+                                                        class="fab fa-instagram"></i></a></li>
+                                            <li class="nav-item"><a href="#" class="nav-link"><i
+                                                        class="fab fa-pinterest-p"></i></a></li>
+                                            <li class="nav-item"><a href="#" class="nav-link"><i
+                                                        class="fab fa-linkedin-in"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- single agent end -->
+                          
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- home page agents section end -->
+
+
+
+
+
+        <!-- home page owl carousle -->
+        <div class="section news-carousel-wrapper">
+            <div class="container">
+                <div class="section-header clearfix">
+                    <h2 class="heading float-left">Latest News</h2>
+                    <h3 class="more-news float-right"><a href="news-grid.html" class="link">All News <i
+                                class="fas fa-angle-right ml-3"></i></a></h3>
+                </div>
+                <div class="slider-wrapper">
+                    <!-- carousel start -->
+                    <div class="owl-carousel owl-theme news-carousel">
+                        <div class="item">
+                            <div class="single-news">
+                                <div class="card">
+                                    <img src="../image/proparty-img/post-1.jpg" alt="" class="card-img">
+
+                                    <div class="news-caption">
+                                        <span class="news-tittle">house</span>
+                                        <h2 class="heading"><a href="#">house is comming very soon</a></h2>
+                                        <p class="date">18 sep. 2018</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- single-news end -->
+                        <div class="item">
+                            <div class="single-news">
+                                <div class="card">
+                                    <img src="../image/proparty-img/post-2.jpg" alt="" class="card-img">
+
+                                    <div class="news-caption">
+                                        <span class="news-tittle">house</span>
+                                        <h2 class="heading"><a href="#">house is comming very soon</a></h2>
+                                        <p class="date">18 sep. 2018</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- single-news end -->
+                        <div class="item">
+                            <div class="single-news">
+                                <div class="card">
+                                    <img src="../image/proparty-img/post-3.jpg" alt="" class="card-img">
+
+                                    <div class="news-caption">
+                                        <span class="news-tittle">house</span>
+                                        <h2 class="heading"><a href="#">house is comming very soon</a></h2>
+                                        <p class="date">18 sep. 2018</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- single-news end -->
+                        <div class="item">
+                            <div class="single-news">
+                                <div class="card">
+                                    <img src="../image/proparty-img/post-4.jpg" alt="" class="card-img">
+
+                                    <div class="card-img-overlay news-caption">
+                                        <span class="news-tittle">house</span>
+                                        <h2 class="heading"><a href="#">house is comming very soon</a></h2>
+                                        <p class="date">18 sep. 2018</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- single-news end -->
+                    </div>
+                    <!-- carousel end -->
+                </div>
+            </div>
+        </div>
+        <!-- home page owl carousle end -->
+
+
+
+
+
+        <!-- Testimonials section -->
+        <div class="section testimonials">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="heading">Testimonials</h2>
+                </div>
+
+                <div class="testimonials-slider">
+                    <div class="owl-carousel owl-theme testimonial">
+                        <div class="item">
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+                                    <img src="../image/proparty-img/testimonial-2.jpg" alt="" class="img-fluid">
+                                </div>
+
+                                <div class="col-md-6 mb-4">
+                                    <div class="icon text-center mb-4"><i class="fas fa-quote-right"></i></div>
+                                    <div class="jumbotron mb-4">
+                                        <p class="font-italic lead quote">Lorem ipsum dolor sit amet consectetur
+                                            adipisicing elit. Reiciendis quo quas laborum. Corporis ex accusantium atque
+                                            delectus
+                                            vero corrupti ullam cum incidunt est?</p>
+                                    </div>
+
+                                    <div class="media">
+                                        <img src="../image/proparty-img/mini-testimonial-2.jpg" alt=""
+                                            class="media-img">
+                                        <div class="media-body">
+                                            <h3 class="media-name">Pablo & Emma</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- item one end -->
+                        <div class="item">
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+                                    <img src="../image/proparty-img/testimonial-1.jpg" alt="" class="img-fluid">
+                                </div>
+
+                                <div class="col-md-6 mb-4">
+                                    <div class="icon text-center mb-4"><i class="fas fa-quote-right"></i></div>
+                                    <div class="jumbotron mb-4">
+                                        <p class="text-italic lead quote">Lorem ipsum dolor sit amet consectetur
+                                            adipisicing elit. Reiciendis quo quas recusandae quibusdam molestias dolorum
+                                            repudiandae est mollitia laborum. Corporis ex accusantium atque delectus
+                                            vero corrupti ullam cum incidunt est?</p>
+                                    </div>
+
+                                    <div class="media">
+                                        <img src="../image/proparty-img/mini-testimonial-1.jpg" alt=""
+                                            class="media-img">
+                                        <div class="media-body">
+                                            <h3 class="media-name">Elbart & Erika</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- item one end -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Testimonials section end -->
+
+
+
+        <!-- footer section -->
+        <footer>
+            <div class="section-footer bg-light">
+                <div class="container">
+                    <div class="footer-up-section">
+                        <div class="row mb-4">
+                            <div class="col-md-4 mb-4">
+                                <div class="about-agrency">
+                                    <h2 class="footer-heading mb-4">EstateAgency</h2>
+                                    <p class="foot-prg lead">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                        maxime dignissimos necessitatibus cumque cupiditate explicabo! Soluta, ex
+                                        aspernatur.
+                                    </p>
+
+                                    <p class="foot-phone"><strong>Phone:</strong> +54 356 945234</p>
+
+                                    <p class="foot-email"><strong>Email:</strong> contact@example.com</p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 mb-4">
+                                <div class="company-nav">
+                                    <h2 class="footer-heading mb-4">The Company</h2>
+
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item"><a href="#" class="nav-link"><i
+                                                    class="fas fa-angle-right mr-3"></i> Site Map</a></li>
+                                        <li class="nav-item"><a href="#" class="nav-link"><i
+                                                    class="fas fa-angle-right mr-3"></i> Legal</a></li>
+                                        <li class="nav-item"><a href="#" class="nav-link"><i
+                                                    class="fas fa-angle-right mr-3"></i> Agent Admin</a></li>
+                                        <li class="nav-item"><a href="#" class="nav-link"><i
+                                                    class="fas fa-angle-right mr-3"></i> Careers</a></li>
+                                        <li class="nav-item"><a href="#" class="nav-link"><i
+                                                    class="fas fa-angle-right mr-3"></i> Affiliate</a></li>
+                                        <li class="nav-item"><a href="#" class="nav-link"><i
+                                                    class="fas fa-angle-right mr-3"></i> Privacy Policy</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 mb-4">
+                                <div class="in-sites-nav">
+                                    <h2 class="footer-heading mb-4">International sites</h2>
+
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item"><a href="#" class="nav-link"><i
+                                                    class="fas fa-angle-right mr-3"></i> Venezuela</a></li>
+                                        <li class="nav-item"><a href="#" class="nav-link"><i
+                                                    class="fas fa-angle-right mr-3"></i> China</a></li>
+                                        <li class="nav-item"><a href="#" class="nav-link"><i
+                                                    class="fas fa-angle-right mr-3"></i> Hong Kong Admin</a></li>
+                                        <li class="nav-item"><a href="#" class="nav-link"><i
+                                                    class="fas fa-angle-right mr-3"></i> Argentina</a></li>
+                                        <li class="nav-item"><a href="#" class="nav-link"><i
+                                                    class="fas fa-angle-right mr-3"></i> Singapore</a></li>
+                                        <li class="nav-item"><a href="#" class="nav-link"><i
+                                                    class="fas fa-angle-right mr-3"></i> Philippines Policy</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="footer-navigation mb-4">
+                            <ul class="nav justify-content-center">
+                                <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link">Property</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
+                                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                            </ul>
+
+                            <ul class="nav justify-content-center social-nav">
+                                <li class="nav-item"><a href="#" class="nav-link"><i class="fab fa-facebook-f"></i></a>
+                                </li>
+                                <li class="nav-item"><a href="#" class="nav-link"><i class="fab fa-twitter"></i></a>
+                                </li>
+                                <li class="nav-item"><a href="#" class="nav-link"><i class="fab fa-instagram"></i></a>
+                                </li>
+                                <li class="nav-item"><a href="#" class="nav-link"><i class="fab fa-pinterest-p"></i></a>
+                                </li>
+                                <li class="nav-item"><a href="#" class="nav-link"><i class="fab fa-linkedin-in"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="footer-down-section text-center py-4">
+                        <p class="copyright-prg">&copy; Copyright <span class="text-success">EstateAgency</span> All Rights
+                            Reserved. </p>
+                        <p class="design-prg">Design BY <a href="#">Mehedi Hassan</a></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer section end -->
+
+
+
+
+
+
+
+        <div class="go-to-top d-none" id="gtt-btn">
+            <a href="#top" class="btn btn-success gtt-btn"><i class="fas fa-angle-up"></i></a>
+        </div>
+
+
+        <!-- main design @end -->
+    </div>
+    <!-- @################################################################ -->
+
+    <!-- others js file -->
+    <script src="../lib/jquery/jquery.min.js"></script>
+    <script src="../lib/bootstrap-4/js/bootstrap.js"></script>
+    <script src="../lib/font-awesome/css/all.js"></script>
+    <script src="../lib/AOS/aos.js"></script>
+    <script src="../lib/wow/wow.js"></script>
+
+    <!-- owl carousel js file -->
+    <script src="../lib/OwlCarousel2/js/owl.carousel.js"></script>
+
+    <!-- main js file -->
+    <script src="js/main.js"></script>
+
+
+
+</body>
+
+</html>

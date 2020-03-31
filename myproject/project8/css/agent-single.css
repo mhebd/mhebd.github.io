@@ -1,0 +1,111 @@
+
+.agent-single-section{
+    font-size: 1.2rem;
+}
+
+
+.agent-single-header .header{
+    padding:1rem 2rem;
+    border-left:3px solid #28a745;
+}
+.agent-single-header .header .heading{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 2.6rem;
+    font-weight: 700;
+}
+.agent-single-header .header .header-prg{
+    font-size: 1.25rem;
+}
+.agent-single-header .breadcrumb{
+    background: transparent;
+}
+.agent-single-header .breadcrumb a{
+    color:#6c757d;
+    transition: .3s;
+}
+.agent-single-header .breadcrumb a:hover{
+    color:#28a745;
+}
+.select-proerty{
+    margin-top: 3rem;
+    margin-bottom:1.5rem;
+}
+.select-proerty .form-control{
+    width:300px;
+
+}
+
+
+.agent-information-wrapper{
+    margin-bottom: 4rem;
+}
+.agent-information .agent-name .name , .agent-property-header .heading{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+.agent-information .agent-info-list .list-item{
+    padding: 5px 0px;
+}
+.agent-information .agent-social .nav svg{
+    width: 1.5rem !important;
+    height: 1.5rem;
+    padding:.3rem;
+    color: #000;
+    transition: .3s;
+}
+.agent-information .agent-social .nav svg:hover{
+    color:#28a745;
+}
+
+.grid-properties .card{
+    overflow: hidden;
+    border-radius: 0px;
+}
+.grid-properties .card img{
+    border-radius: 0px;
+    transition: .5s;
+}
+.grid-properties .card:hover img{
+    transform: scale(1.1);
+}
+.grid-properties .property-caption{
+    position: absolute;
+    padding:0px;
+    width:100%;
+    bottom:-125px;
+    transition: bottom .5s;
+}
+.grid-properties .card:hover .property-caption{
+    bottom:-20px;
+}
+.grid-properties .property-caption .information{
+    color:#fff;
+    padding:1rem;
+    margin-bottom: .5rem;
+}
+.grid-properties .property-caption .information .address{
+    font-size: 2.4rem;
+    font-weight: 600;
+}
+.grid-properties .property-caption .information .rent{
+    font-size: 1.25rem;
+    border: 3px solid #28a745;
+    border-radius: 2rem;
+    padding:.6rem .5rem;
+    margin:.6rem 0rem;
+    display: inline-block;
+}
+.grid-properties .property-caption .information .link{
+    display: block;
+    color:#fff;
+}
+.property-caption .extra-info .table{
+    width:100%;
+    height: 98px;
+    border:none;
+}
+.property-caption .extra-info .table th , .table td{
+    font-size: 1rem;
+    border:0px;
+}

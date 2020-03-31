@@ -1,0 +1,210 @@
+
+
+
+.property-single-section{
+    font-size: 1.2rem;
+}
+
+.property-single-header .header{
+    padding:1rem 2rem;
+    border-left:3px solid #28a745;
+    margin-bottom: 2rem;
+}
+.property-single-header .header .heading{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+}
+.property-single-header .header .header-prg{
+    font-size: 1.25rem;
+}
+.property-single-header .breadcrumb{
+    background: transparent;
+}
+.property-single-header .breadcrumb a{
+    color:#6c757d;
+    transition: .3s;
+}
+.property-single-header .breadcrumb a:hover{
+    color:#28a745;
+}
+
+
+
+.property-single-carousel .owl-theme .owl-nav{
+    position: absolute;
+    top:-11px;
+    right:0;
+}
+.property-single-carousel .owl-carousel .owl-nav button.owl-prev, .owl-carousel .owl-nav button.owl-next{
+    color:#fff;
+    background: #28a745;
+    font-size: 3rem;
+    padding: 0rem 1rem !important;
+}
+/* .property-single-carousel .owl-carousel .owl-nav button.owl-prev, .owl-carousel .owl-nav button.owl-next:hover{
+    background: #000;
+} */
+.property-single-carousel .owl-theme .owl-nav [class*="owl-"]{
+    margin:0px;
+    border-radius: 0px;
+    transition: .3s;
+}
+.owl-theme .owl-nav [class*="owl-"]:hover{
+    background: #000 !important;
+}
+.owl-theme .owl-dots{
+    display: none;
+}
+.property-description{
+    margin-bottom: 5rem;
+}
+.property-description .property-rent{
+    margin-bottom: 4rem;
+}
+.property-description .property-rent .rent-icon{
+    border:7px solid #28a745;
+    padding:1.5rem 2rem;
+}
+.list-item{
+    padding:5px 0px;
+}
+.property-description .property-rent .rent-icon svg{
+    width:2.5rem !important;
+    height: 4rem;
+    margin:.5rem 1rem;
+}
+.property-description .property-rent .amount{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-left: -50px;
+}
+
+
+.property-summery .summery-header .heading, .description-header .heading, .others-pro-info-header .heading , .ca-header .heading{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+
+.others-list .list-item{
+    width:50%;
+    padding:5px 5px 5px 25px;
+    float:left;
+    position: relative;
+}
+.others-list .list-item::before{
+    content: '';
+    position: absolute;
+    width:10px;
+    height: 2px;
+    background: rgb(83, 83, 83);
+    top:17px;
+    left:0;
+}
+@media (min-width:992px){
+    .others-list .list-item{
+        width:33.3333%;
+    }
+}
+
+.property-display-nav .nav{
+    margin-bottom: 20px;
+}
+.property-display-nav .nav-tabs{
+    border-bottom: 0px;
+}
+.property-display-nav .nav .nav-link{
+    border:0px;
+    color: #000;
+    position: relative;
+    margin:0px 1px;
+}
+.property-display-nav .nav .nav-link::before{
+    content: '';
+    position: absolute;
+    width:100%;
+    height: 3px;
+    background: #28a745;
+    left: 0;
+    bottom:0;
+    visibility: hidden;
+}
+.property-display-nav .nav .active::before{
+    visibility: visible;
+}
+
+
+
+.contact-agent-wrapper {
+    margin-bottom:6rem;
+}
+.contact-agent-wrapper .about-agent .agent-name .name{
+    font-weight: bold;
+    font-size: 1.7rem;
+}
+.contact-agent-wrapper .about-agent .agent-prg p{
+    font-size: 1.05rem;
+}
+.agent-social-icon{
+    margin-top:1.7rem;
+}
+.agent-social-icon .nav .nav-link svg{
+    width:1.5rem !important;
+    height: 1.5rem;
+    padding:.3rem;
+    color: #000;
+    transition: .3s;
+}
+.agent-social-icon .nav .nav-link svg:hover{
+    color:#28a745;
+}
+.agent-message-form textarea{
+    resize: none;
+}
+.agent-message-form .am-btn{
+    margin-top: 1rem;
+    padding:16px 45px;
+    background: #000;
+    border-radius: 0px;
+    border:none;
+    transition: .4s;
+}
+.agent-message-form .am-btn:hover{
+    background: #28a745;
+    color:#000;
+}
+
+
+
+@media (max-width:575px){
+    iframe{
+        height: 230px !important;
+    }
+}
+
+
+@media (min-width:576px){
+    iframe{
+        height: 250px !important;
+    }
+}
+
+@media (min-width:768px){
+    iframe{
+        height: 320px !important;
+    }
+}
+
+@media (min-width:992px){
+    iframe{
+        height: 380px !important;
+    }
+}
+@media (min-width:1200px){
+    iframe{
+        height: 450px !important;
+    }
+}
