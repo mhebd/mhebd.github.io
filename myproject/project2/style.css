@@ -1,6 +1,9 @@
 body{
     font-family: sans-serif;
 }
+a{
+    text-decoration: none !important;
+}
 p{
     font-size: 1.1rem;
     color:whitesmoke
@@ -110,6 +113,26 @@ textarea{
     background: rgb(46, 46, 46);
 }
 
+@media (max-width:786px){
+    .navbar .navbar-brand h2 {
+        font-size: 40px;
+    }
+    .display-3 {
+        font-size: 45px !important;
+    }
+}
+
+@media (max-width:576px){
+    .navbar {
+        padding:0px 10px;
+    }
+    .navbar .navbar-brand h2 {
+        font-size: 30px;
+    }
+    .display-3 {
+        font-size: 35px !important;
+    }
+}
 
 /* jljflsdkjgljdslgkj */
 #createConv{

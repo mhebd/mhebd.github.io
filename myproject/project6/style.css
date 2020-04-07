@@ -68,7 +68,7 @@ input:focus{
 
 /* slider style start */
 /* caption style */
-@media (min-width: 520px){
+@media (min-width: 576px){
     .nivo-caption {
         bottom: 20%;
         left: 50%;
@@ -101,7 +101,7 @@ input:focus{
     }
 }
 
-@media (min-width: 695px){
+@media (min-width: 768px){
     .nivo-caption {
         bottom: 14%;
         left: 50%;
@@ -134,7 +134,7 @@ input:focus{
     }
 }
 
-@media (min-width: 900px){
+@media (min-width: 992px){
     .nivo-caption {
         bottom: 15%;
         left: 50%;
@@ -462,6 +462,7 @@ svg.radial-progress circle {
     color:#fff;
     transform: rotateX(45deg);
     -moz-transform: rotate(-45deg);
+    -webkit-transform: rotateX(45deg);
 }
 .price-card .card-header h2{
     font-weight: 700;
@@ -615,6 +616,30 @@ svg.radial-progress circle {
 }
 /* footer up style end */
 
+
+@media (max-width: 576px){
+    .navbar-brand-name{
+        font-size: 1.5rem;
+    }
+    .theme-default .nivo-controlNav, .nivo-directionNav {
+        display: none;
+    }
+    .section-heading h2{
+        font-size: 2rem;
+    }
+    .welcome-form .input-group {
+        width:300px;
+        height: 40px;
+    }
+    .welcome-form .input-group .form-control {
+        height: 40px !important;
+    }
+    .welcome-form .input-group .sub-btn {
+        width: auto;
+        height: 40px;
+        font-size: 1em;
+    }
+}
 
 
 #createConv{

@@ -23,8 +23,8 @@ body{
 .scroll  .text-white{
     color:#007BFF !important;
 }
-.navbar-toggler-icon{
-    background: #007BFF;
+.navbar-toggler {
+    background-color: #007bff;
 }
 .navbar-nav a{
     position: relative;
@@ -247,9 +247,10 @@ body{
     border-radius: 30px;
 }
 
-
+.subscribe-wrapper .nav-link{
+    padding:5px;
+}
 .subscribe-wrapper .nav-link i{
-    font-size: 2rem;
     padding:.6rem;
     border:.25rem solid #007BFF;
     border-radius: 50%;
@@ -266,6 +267,18 @@ body{
 
 .sec-footer{
     padding-bottom: 0px;
+}
+
+@media (max-width:786px){
+    .name {
+        font-size: 3rem;
+    }
+    .type, .typed-cursor{
+        font-size: 2rem;
+    }
+    .section-heading{
+        font-size: 45px;
+    }
 }
 
 /* embed */

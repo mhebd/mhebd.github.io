@@ -476,7 +476,27 @@ footer a:hover{
     bottom:30px;
     right:50px;
     visibility: hidden;
+    z-index: 9999;
 }
 .scroll{
     visibility: visible;
+}
+
+
+
+@media (max-width: 576px) {
+    .navbar .n-b-name{
+        margin-left: 10px;
+    }
+    .window .window-heading{
+        font-size: 1.8rem;
+    }
+    .section-header .heading{
+        font-size: 2rem;
+    }
+    .btn-b2t{
+        bottom: 20px;
+        right:20px;
+        z-index: 9999;
+    }
 }

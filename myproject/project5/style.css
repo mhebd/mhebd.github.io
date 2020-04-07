@@ -31,6 +31,7 @@ body{
     background-attachment: fixed;
     width:100%;
     height: 100vh;
+    min-height: 700px;
 }
 .overlay-bg{
     width:100%;
@@ -132,9 +133,10 @@ nav{
 
 
 /* Features section */
-.features i{
-    width:80px;
+.features svg{
+    width:80px !important;
     height: 80px;
+    padding:20px;
     font-size: 2.5rem;
     background: #17a2b8;
     border-radius: 50%;
@@ -177,7 +179,6 @@ nav{
     background-position: center !important;
     background-size: cover !important;
     object-fit: cover !important;
-    cursor: all-scroll;
 }
 .pf-text{
     visibility: hidden;
@@ -185,9 +186,12 @@ nav{
     width:100%;
     height: 100%;
     padding:1rem;
+    opacity: 0;
+    transition: all .3s ease-in;
 }
 .pf-bg-img:hover .pf-text{
     visibility: visible;
+    opacity: 1;
 }
 
 /* team section */
@@ -207,8 +211,9 @@ nav{
     width:100%;
     height: 100%;
     padding:1rem;
+    opacity: 0;
     visibility: hidden;
-    transition: all ease .3s;;
+    transition: all ease .3s;
 }
 .member-name{
     padding:.5rem 0rem;
@@ -224,6 +229,7 @@ nav{
 }
 .team-member:hover .member-profile{
     visibility: visible;
+    opacity: 1;
 }
 
 
@@ -238,4 +244,43 @@ nav{
 }
 .contact-form #textarea:focus{
     border-color: #17a2b8; 
+}
+
+
+@media (max-width: 992px){
+    .b-name {
+        font-size: 40px;
+    }
+    .first-look-heading {
+        font-size: 40px;
+    }
+    .first-look-prg{
+        font-size: 1.5rem;
+    }
+}
+@media (max-width:768px){
+    .navbar-brand h2 {
+        font-size: 25px;
+    }
+    .b-name {
+        font-size: 30px;
+    }
+    .first-look-heading {
+        font-size: 30px;
+    }
+    .first-look-prg{
+        font-size: 1rem;
+    }
+    .first-look-btn{
+        padding: .5rem 1rem;
+    }
+    .section-heading h2{
+        font-size: 2.2rem;
+    }
+    .pf-bg-img{
+        height: 200px;
+    }
+    .member-img{
+        min-height: 350px;
+    }
 }

@@ -482,7 +482,7 @@ bottom:30px;
         font-size: .8rem;
     }
 }
-@media (max-width:786px){
+@media (max-width:768px){
     .single-agent p{
         margin-bottom: 1rem;
     }
@@ -621,6 +621,31 @@ bottom:30px;
 .footer-down-section a:hover{
     color:#28a745;
 }
+
+
+@media (max-width:576px) {
+    .top-navigation .navbar-brand .brand-name{
+        font-size: 2rem;
+    }
+    .carousel-caption .property-name, .section-header .heading, .service .s-heading h2, .news-grid-header .header .heading, .property-grid-header .header .heading, .about-header .header .heading, .agency-info-header .heading, .about-header .header .heading, .agency-info-header .heading, .agent-grid-header .header .heading,.agent-single-header .header .heading,.news-single-header .header .heading, .nc-header .heading, .comment-form-header .heading,.contact-header .header .heading,.property-single-header .header .heading{
+        font-size: 2rem !important;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* footer styling end */
 #createConv{
     display: none;

@@ -23,7 +23,7 @@
 
     <!-- top nav start -->
     <div class="container-fluid">
-        <nav class="navbar navbar-expand-md navbar-bg navbar-dark fixed-top" id="top-navbar">
+        <nav class="navbar navbar-expand-lg navbar-bg navbar-dark fixed-top" id="top-navbar" style="width:100vw;">
             <div class="container">
 
                 <div class="navbar-brand">
@@ -57,7 +57,7 @@
     <!-- navbar @end -->
 
     <!-- nivo slide start -->
-    <div class="container-fluid d-none d-sm-block">
+    <div class="container-fluid">
         <div class="nivo-slider-wrapper" id="home" style="position: relative;">
             <div id="wrapper">
                 <!--  -->
@@ -77,7 +77,7 @@
                     </div>
 
                     <div id="htmlcaption" class="nivo-html-caption">
-                        <div class="text-center">
+                        <div class="text-center  d-none d-sm-block">
                             <h4 class="text-white mb-3 animated fadeInUp delay-2s h-1">The Best Business Information
                             </h4>
                             <h2 class="text-white mb-3 animated fadeInUp delay-2s h-2">Helping Business Security & Peace
@@ -471,12 +471,14 @@
                             dolor sit amet consectetur adipisicing elit. Provident, autem.</p>
 
 
-                        <div class="input-group">
-                            <input type="email" class="form-control welcome-email" placeholder="Email">
-                            <div class="input-group-append">
-                                <input type="submit" class="btn btn-primary sub-btn" value="Subscribe">
+                        <form action="#" class="subs-form">
+                            <div class="input-group">
+                                <input type="email" class="form-control welcome-email" placeholder="Email">
+                                <div class="input-group-append">
+                                    <input type="submit" class="btn btn-primary sub-btn" value="Subscribe">
+                                </div>
                             </div>
-                        </div>
+                        </form>
 
                     </div>
                 </div>
