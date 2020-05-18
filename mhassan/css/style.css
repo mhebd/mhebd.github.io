@@ -27,6 +27,12 @@ button:focus {
 }
 
 /* Common in section */
+.bg-style {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
 #about, #services, #portfolio, #review, #contact, #footer {
     padding:90px 0px;
 }
@@ -38,9 +44,11 @@ button:focus {
     text-transform: capitalize;
     font-weight: 700;
     font-family: 'Courgette', cursive;
+    color: white;
 }
 .section-heading p {
     font-size: 14px;
+    color:white;
 }
 /* Reset Css End */
 
@@ -121,9 +129,7 @@ button:focus {
     width:100%;
     min-height: 700px;
     height: 100vh;
-    background-image: url(../img/banner.png);
-    background-size: cover;
-    background-position: center;
+    background-image:linear-gradient( black,rgba(72, 57, 208, 0.562)), url(../img/hero-bg.jpg);
     position: relative;
 }
 
@@ -170,6 +176,13 @@ button:focus {
 /* ************==========================***************** */
 
 /* About section */
+#about {
+    background-image:linear-gradient(rgba(0, 0, 0, 0.534),rgba(0, 0, 0, 0.514)), url(../img/about-bg.jpg);
+    color:white;
+}
+#about .table {
+    color: white !important;
+}
 .small-heading{
     font-size: 18px;
     text-transform: uppercase;
@@ -189,12 +202,13 @@ button:focus {
     background-image: url(../img/color-grid.png);
     background-repeat: no-repeat;
     background-position: center;
-    padding-bottom: 70px;
 }
 #about .profile-img img{
     width:100% !important;
     height: 500px;
+    box-shadow: 3px 10px 13px -7px #000000;
 }
+
 #about .social-link .nav-link {
     padding:0px;
     padding-right: 10px;
@@ -295,10 +309,14 @@ button:focus {
 
 
 /* Sevices Section  */
-#services, #review {
-    background: #fdf8f8;
+#services{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.562)), url(../img/services-bg.jpg);
+    color: white;
 }
+
 #services .service {
+    background: white;
+    color: gray;
     padding: 10px;
     border: 1px solid transparent;
     transition: all ease-in .3s;
@@ -308,8 +326,12 @@ button:focus {
     -o-transition: all ease-in .3s;
 }
 #services .service:hover {
-    border: 1px solid #0df737;
     box-shadow: 0px 0px 35px black;
+    transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
 }
 #services .service i{
     font-size: 50px;
@@ -334,12 +356,14 @@ button:focus {
 /* Portfolio section  */
 #portfolio{
     overflow: hidden;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.303),rgba(0, 0, 0, 0.104)), url(../img/portfolio-bg.jpg);
 }
 #portfolio .nav-item {
     margin:0 5px;
     padding: 0 3px;
     text-transform: capitalize;
     font-weight: 600;
+    color: white;
     cursor: pointer;
     transition: color .3s;
     -webkit-transition: color .3s;
@@ -405,12 +429,11 @@ left:0;
 /* Portfolio section End */
 
 /* Review sectio  */
+#review {
+    background-image: url(../img/slider-bg.png);
+}
 #review .review-slider-wrapper {
     overflow: hidden;
-    background-image: url(../img/slider-bg.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
     color: white;
     position: relative;
     padding: 20px 0px;
@@ -473,6 +496,9 @@ left:0;
 
 
 /* Contact section */
+#contact{
+    background-image: url(../img/contact-bg.jpg);
+}
 #contact .form-control {
     border-radius: 0px;
     -webkit-border-radius: 0px;
