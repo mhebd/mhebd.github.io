@@ -75,6 +75,18 @@ var scores, dice, activePlayer, gamePlaying, roundScore;
 
 
 
+  function nextPlayer() {
+    roundScore = 0;
+    document.getElementById('current-' + activePlayer).textContent = '0';
+    document.querySelector('.player-0-panel').classList.toggle('active');
+    document.querySelector('.player-1-panel').classList.toggle('active');
+    activePlayer === 0? activePlayer = 1: activePlayer = 0;
+    dice.style.display = 'none';
+  }
+
+
+
+  var lastDiceNum;
 
   document.querySelector('.btn-roll').addEventListener('click', function(){
     if(gamePlaying){
@@ -83,17 +95,19 @@ var scores, dice, activePlayer, gamePlaying, roundScore;
       dice.style.display = 'block';
       dice.src = 'dice-' + diceNum + '.png';
 
-      if( diceNum !== 1 ){
+      if( lastDiceNum === 6 && diceNum === 6 ) {
+        document.getElementById('score-' + activePlayer).textContent = '0';
+        scores[activePlayer]  = 0;
+        nextPlayer();
+      } else if( diceNum !== 1 ){
         roundScore += diceNum;
         document.getElementById('current-' + activePlayer).textContent = roundScore;
       } else {
-        roundScore = 0;
-        document.getElementById('current-' + activePlayer).textContent = '0';
-        document.querySelector('.player-0-panel').classList.toggle('active');
-        document.querySelector('.player-1-panel').classList.toggle('active');
-        activePlayer === 0? activePlayer = 1: activePlayer = 0;
-        dice.style.display = 'none';
+        nextPlayer();
       }
+      
+      lastDiceNum = diceNum;
+
     }
   });
 
