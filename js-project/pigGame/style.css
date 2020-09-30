@@ -48,6 +48,10 @@ body {
     margin-bottom: 50px;
 }
 
+.start-form h6 {
+    text-align: end;
+}
+
 .message {
     margin-bottom: 15px;
     color: red;
