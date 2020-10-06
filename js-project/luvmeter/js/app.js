@@ -325,7 +325,9 @@
               <p>আপনার ভালবাসা `+ score +`% ভাগ খাটি।</p>
               <p>আপনার ভালবাসার গভিরতা আর বেশি হোক।</p>
               <p>আপনার জন্য শুভকামনা রইল।</p> 
-              </div>`; 
+              </div>
+<div class="fb-share-button" data-href="https://mhebd.github.io/js-project/luvmeter/" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmhebd.github.io%2Fjs-project%2Fluvmeter%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>  
+`; 
             } else {
               mainContent.innerHTML = `<div class="text-center">
               <img src="img/rose-`+ rose +`.jpg" class="loading" />
@@ -333,7 +335,9 @@
               <p>আপনার ভালবাসা `+ score +`% ভাগ খাটি। যা মোটেও একটা ভাল খবর নয়।</p>
               <p>তাই, ভালবাসার মানুষটিকে আপন করে পেতে চাইলে তার সাথে আর বেশি বেশি সময় কাটান, তাকে আর বেশি করে সময় দিন।</p>
               <p>আপনার জন্য শুভকামনা রইল।</p> 
-              </div>`;
+              </div>
+<div class="fb-share-button" data-href="https://mhebd.github.io/js-project/luvmeter/" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmhebd.github.io%2Fjs-project%2Fluvmeter%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+`;
             };
           }
         }, 1000);
