@@ -327,7 +327,7 @@
               <p>আপনার জন্য শুভকামনা রইল।</p> 
               </div>
 <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fmhebd.github.io%2Fjs-project%2Fluvmeter%2F&layout=button&size=large&width=77&height=28&appId" width="77" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
-<div class="fb-share-button" data-href="https://mhebd.github.io/js-project/luvmeter/" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmhebd.github.io%2Fjs-project%2Fluvmeter%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>  
+<div class="fb-share-button" data-href="https://mhebd.github.io/js-project/luvmeter/ hi i am emon" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmhebd.github.io%2Fjs-project%2Fluvmeter%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>  
 `; 
             } else {
               mainContent.innerHTML = `<div class="text-center">
@@ -338,7 +338,7 @@
               <p>আপনার জন্য শুভকামনা রইল।</p> 
               </div>
 <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fmhebd.github.io%2Fjs-project%2Fluvmeter%2F&layout=button&size=large&width=77&height=28&appId" width="77" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
-<div class="fb-share-button" data-href="https://mhebd.github.io/js-project/luvmeter/" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmhebd.github.io%2Fjs-project%2Fluvmeter%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+<div class="fb-share-button" data-href="https://mhebd.github.io/js-project/luvmeter/  hello my name is emon" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmhebd.github.io%2Fjs-project%2Fluvmeter%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
 `;
             };
           }
