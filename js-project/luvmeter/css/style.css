@@ -1,0 +1,199 @@
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto', Times, serif;
+  font-size: 1em;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: whitesmoke;
+}
+
+.container-fluid {
+  width: 100vw;
+  min-height: 100vh;
+  background-image: url(../img/bg-2.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.app-heading {
+  font-family: 'Monoton';  
+}
+
+.anim {
+  animation-name: Anim;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes Anim {
+  0% {color: white;}
+  20% {color: red;}
+  40% {color: blue;}
+  60% {color: orange;}
+  80% {color: rgb(16, 224, 16);}
+  100% {color: white;}
+}
+
+.app-container-wrap {
+  width: 100%;
+  max-width: 600px;
+  background: rgba(0, 0, 0, 0.473);
+  color: white;
+  padding: 0 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.submit-btn {
+  background: rgb(252, 143, 1);
+  color: white;
+}
+.submit-btn:hover {
+  background: rgb(43, 43, 43);
+  color: white;
+}
+.skip-btn {
+  background: black;
+  color: white;
+}
+.skip-btn:hover {
+  background: rgb(226, 150, 51);
+  color: white;
+}
+
+.loading {
+  width: 50%;
+  height: auto;
+  margin: 0 24%;
+}
+
+
+/* Radio button design
+======================================= */
+/* The ans-container */
+.ans-container {
+  display: inline-block;
+  position: relative;
+  width: 45%;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.ans-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.ans-container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.ans-container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.ans-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.ans-container .checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+
+
+
+
+
+
+
+@media (max-width: 500px){
+  .app-container-wrap {
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 20px;
+    position: relative;
+    top: 0%;
+    left: 0%;
+    transform: translate(-0%, -0%);
+    -webkit-transform: translate(-0%, -0%);
+    -moz-transform: translate(-0%, -0%);
+    -ms-transform: translate(-0%, -0%);
+    -o-transform: translate(-0%, -0%);
+}
+  .ans-container {
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
