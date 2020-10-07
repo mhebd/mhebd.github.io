@@ -314,7 +314,7 @@
        mainContent.innerHTML = `<img src="img/loading-4.gif" class="loading" />`;
         message.innerHTML = '';
         setTimeout(() => {
-          if( i <= 9){
+          if( i <= 1){
             nextQuest();
           } else {
             var rose = Math.floor(Math.random() * 6) + 1;
@@ -325,6 +325,8 @@
               <p>আপনার ভালবাসা `+ score +`% ভাগ খাটি।</p>
               <p>আপনার ভালবাসার গভিরতা আর বেশি হোক।</p>
               <p>আপনার জন্য শুভকামনা রইল।</p> 
+              
+              <p class="">বন্ধুদের সাথে শেয়ার করুন <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fmhebd.github.io%2Fjs-project%2Fluvmeter%2F&layout=button&size=large&width=77&height=28&appId" width="77" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe></p>
               </div>`; 
             } else {
               mainContent.innerHTML = `<div class="text-center">
@@ -332,7 +334,9 @@
               <p>অভিনন্দন!</p>
               <p>আপনার ভালবাসা `+ score +`% ভাগ খাটি। যা মোটেও একটা ভাল খবর নয়।</p>
               <p>তাই, ভালবাসার মানুষটিকে আপন করে পেতে চাইলে তার সাথে আর বেশি বেশি সময় কাটান, তাকে আর বেশি করে সময় দিন।</p>
-              <p>আপনার জন্য শুভকামনা রইল।</p> 
+              <p>আপনার জন্য শুভকামনা রইল।</p>
+
+              <p class="">বন্ধুদের সাথে শেয়ার করুন <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fmhebd.github.io%2Fjs-project%2Fluvmeter%2F&layout=button&size=large&width=77&height=28&appId" width="77" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe></p> 
               </div>`;
             };
           }
