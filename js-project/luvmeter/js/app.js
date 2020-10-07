@@ -314,7 +314,7 @@
        mainContent.innerHTML = `<img src="img/loading-4.gif" class="loading" />`;
         message.innerHTML = '';
         setTimeout(() => {
-          if( i <= 9){
+          if( i <= 1){
             nextQuest();
           } else {
             var rose = Math.floor(Math.random() * 6) + 1;
