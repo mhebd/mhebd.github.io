@@ -317,7 +317,7 @@
           if( i <= 9){
             nextQuest();
           } else {
-            var twitterBtn = `<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button btn btn-success" data-text="Hello there, This is very awesome and enjoyable program. You can try this program to make your darling pleased on you." data-url="https://mhebd.github.io/js-project/luvmeter/" data-show-count="false">Tweet</a>`;
+            var twitterBtn = `<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a>`;
 
             var facebookBtn = `<iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fmhebd.github.io%2Fjs-project%2Fluvmeter%2F&layout=button&size=large&width=77&height=28&appId" width="77" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>`;
 
