@@ -317,36 +317,32 @@
           if( i <= 9){
             nextQuest();
           } else {
+            var twitterBtn = `<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="Hello there, This is very awesome and enjoyable program. You can try this program to make your darling pleased on you." data-url="https://mhebd.github.io/js-project/luvmeter/" data-via="mhemonhossain" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>`;
+
+            var facebookBtn = `<iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fmhebd.github.io%2Fjs-project%2Fluvmeter%2F&layout=button&size=large&width=77&height=28&appId" width="77" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>`;
+
             var rose = Math.floor(Math.random() * 6) + 1;
             if( score >= 50 ){
               mainContent.innerHTML = `<div class="text-center">
-              <img src="img/rose-`+ rose +`.jpg" class="loading" />
+              <img src="img/rose-${rose}.jpg" class="loading" />
               <p>অভিনন্দন!!!</p>
-              <p>আপনার ভালবাসা `+ score +`% ভাগ খাটি।</p>
+              <p>আপনার ভালবাসা ${score}% ভাগ খাটি।</p>
               <p>আপনার ভালবাসার গভিরতা আর বেশি হোক।</p>
               <p>আপনার জন্য শুভকামনা রইল।</p> 
               
-              <p class="">বন্ধুদের সাথে শেয়ার করুন <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fmhebd.github.io%2Fjs-project%2Fluvmeter%2F&layout=button&size=large&width=77&height=28&appId" width="77" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe></p>
-
-              <div class="fb-share-button" 
-data-href="https://mhebd.github.io/js-project/luvmeter/" 
-data-layout="button_count">
-</div>
+              <p class="">বন্ধুদের সাথে শেয়ার করুন </p>
+              <p class="">${facebookBtn} | ${twitterBtn}</p> 
               </div>`; 
             } else {
               mainContent.innerHTML = `<div class="text-center">
-              <img src="img/rose-`+ rose +`.jpg" class="loading" />
+              <img src="img/rose-${rose}.jpg" class="loading" />
               <p>অভিনন্দন!</p>
-              <p>আপনার ভালবাসা `+ score +`% ভাগ খাটি। যা মোটেও একটা ভাল খবর নয়।</p>
+              <p>আপনার ভালবাসা ${score}% ভাগ খাটি। যা মোটেও একটা ভাল খবর নয়।</p>
               <p>তাই, ভালবাসার মানুষটিকে আপন করে পেতে চাইলে তার সাথে আর বেশি বেশি সময় কাটান, তাকে আর বেশি করে সময় দিন।</p>
               <p>আপনার জন্য শুভকামনা রইল।</p>
 
-              <p class="">বন্ধুদের সাথে শেয়ার করুন <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fmhebd.github.io%2Fjs-project%2Fluvmeter%2F&layout=button&size=large&width=77&height=28&appId" width="77" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe></p> 
-
-              <div class="fb-share-button" 
-data-href="https://mhebd.github.io/js-project/luvmeter/" 
-data-layout="button_count">
-</div>
+              <p class="">বন্ধুদের সাথে শেয়ার করুন</p> 
+              <p class="">${facebookBtn} | ${twitterBtn}</p> 
               </div>`;
             };
           }
