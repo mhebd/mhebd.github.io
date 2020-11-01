@@ -1,0 +1,103 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(48, 45, 45);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+}
+
+.movie-list select {
+  border: 1px solid brown;
+  padding: 5px;
+  outline: none;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.seat-types {
+  display: flex;
+  margin: 20px 0px;
+  justify-content: space-around;
+  margin-bottom: 30px;
+  background: rgba(0, 0, 0, 0.26);
+  padding: 15px 0px;
+} 
+
+.seat-types li {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.container {
+  perspective: 1000px;
+}
+
+.screen {
+  height: 100px;
+  background: white;
+  margin-bottom: 30px;
+  transform: rotateX(-45deg);
+  -webkit-transform: rotateX(-45deg);
+  -moz-transform: rotateX(-45deg);
+  -ms-transform: rotateX(-45deg);
+  -o-transform: rotateX(-45deg);
+  box-shadow: 0 3px 10px rgba(255, 255, 255, 0.678);
+}
+
+.row {
+  display: flex;
+}
+
+.seat {
+  width: 20px;
+  height: 20px;
+  background: black;
+  margin: 3px;
+  border-radius: 10px 10px 0 0;
+  -webkit-border-radius: 10px 10px 0 0;
+  -moz-border-radius: 10px 10px 0 0;
+  -ms-border-radius: 10px 10px 0 0;
+  -o-border-radius: 10px 10px 0 0;
+}
+
+.selected {
+  background: turquoise;
+}
+
+.booked {
+  background: whitesmoke;
+}
+
+.row .seat:nth-of-type(2) {
+  margin-right: 50px;
+}
+
+.row .seat:nth-last-of-type(2) {
+  margin-left: 50px;
+}
+
+.row .seat:not(.booked):hover {
+  cursor: pointer;
+}
+
+.info {
+  margin-top: 40px;
+}
+
+.info span {
+  color: turquoise;
+}

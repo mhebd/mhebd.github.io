@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hang-Man Game</title>
+  
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body class="notifi-show">
+
+  <div class="container-wrap">
+    <h2>Hang-Man Game</h2>
+    <p class="info">Guase the correct word & won the game.</p>
+
+    <div class="game-container">
+      <svg width="200px" height="250px" class="game-art">
+        <!-- line bar  -->
+        <line x1="60" y1="20" x2="140" y2="20"  />
+        <line x1="140" y1="20" x2="140" y2="60"  />
+        <line x1="60" y1="20" x2="60" y2="190"  />
+        <line x1="40" y1="190" x2="80" y2="190"  />
+
+        <!-- head -->
+        <circle cx="140" cy="75" r="15" class="body" />
+
+        <!-- body -->
+        <line x1="140" y1="90" x2="140" y2="140" class="body" />
+        <line x1="120" y1="100" x2="140" y2="110" class="body" />
+        <line x1="140" y1="110" x2="160" y2="100" class="body" />
+        <line x1="120" y1="160" x2="140" y2="140" class="body" />
+        <line x1="140" y1="140" x2="160" y2="160" class="body" />
+      </svg>
+
+      <div class="wrong-letter-wrap" id="wrong-letters"></div>
+    </div>
+
+    <div class="correct-letter-wrap" id="word"></div>
+  </div>
+
+  <div class="final-message-wrap" id="message-contianer">
+    <div class="message-body">
+      <p id="message"></p>
+      <button class="play-again" id="play-btn">Play Again</button>
+    </div>
+  </div>
+ 
+  <div class="notification-wrap" id="notification-container">
+    <p>This letter is used!!</p>
+  </div>
+
+
+  <script src="app.js"></script>
+  
+</body>
+</html>

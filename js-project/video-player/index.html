@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Video Player</title>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  
+  <div class="container">
+    <h2>Custom Video Player</h2>
+
+    <video src="video/natural.mp4" id="video" class="video" poster="img/intro.png" ></video>
+
+    <div class="controller">
+      <button class="btn play play-icon" id="play"><span></span></button>
+      <button class="btn stop" id="stop"><span></span></i></button>
+
+      <input type="range" name="volume" min="0" max="1" value="1" class="volume" id="volume" step="0.0001">
+      <input type="range" name="progress"  class="progress" id="progress" min="0" max="100" value="0" step="0.001">
+
+      <span class="time" id="time">00:00</span>
+    </div>
+  </div>
+
+
+
+
+
+  <script src="app.js"></script>
+
+</body>
+</html>

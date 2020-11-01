@@ -1,0 +1,88 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: cursive;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(aqua, brown);
+}
+
+.container {
+  padding: 20px;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.61);
+  width: 300px;
+  background: rgb(255, 129, 26);
+}
+
+.container h2 {
+  text-align: center;
+  color: rgb(255, 255, 255);
+  margin-bottom: 20px;
+}
+
+.container .input-group {
+  padding: 6px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group label {
+  color: rgb(206, 206, 206)
+}
+
+.input-group input {
+  width: 100%;
+  height: 35px;
+  margin: 5px 0px;
+  padding: 5px;
+  outline: none;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  font-size: 16px;
+  border-color: brown;
+}
+
+.input-group small {
+  color: red;
+  visibility: hidden;
+}
+
+.input-group.error input {
+  border-color: red;
+}
+
+.input-group.error small {
+  visibility: visible;
+}
+
+.input-group.success input {
+  border-color: rgb(33, 218, 33);
+}
+
+.submit-btn {
+  width: 120px;
+  height: 40px;
+  outline: none;
+  border-color: brown;
+  color: whitesmoke;
+  background: rgb(0, 0, 0);
+  font-size: 20px;
+  margin-top: 7px;
+  margin-left: 65px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background: rgb(34, 34, 34);
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meal Finder</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+  <div class="container-wrap">
+    <h1 class="heading">Meal Finder</h1>
+
+    <div class="search-box flex">
+      <form action="#" class="search-form flex" id="s-form" name="s-fomr">
+        <input type="text" name="search" id="s" class="search" placeholder="Search Your Meal">
+        <button type="submit" class="submit-btn btn">
+          <i class="fa fa-search"></i>
+        </button>
+      </form>
+      <button class="random-btn btn" id="random">
+        <i class="fa fa-random"></i>
+      </button>
+    </div>
+
+    <div class="search-result-heading" id="srh"></div>
+    <div class="search-results" id="sr"></div>
+    <div class="search-single-result" id="ssr"></div>
+  </div>
+
+  <script src="app.js"></script>
+  
+</body>
+</html>
