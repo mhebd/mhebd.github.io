@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Audio Player</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  
+  <h2 class="heading">Custom audio player</h2>
+  <div class="container-wrap" id="container">
+    <div class="audio-info">
+      <marquee class="title" id="title"></marquee>
+      <div class="progress-container" id="progress-container">
+        <div class="progress" id="progress"></div>
+      </div>
+    </div>
+
+    <audio id="music"></audio>
+
+    <div class="controller-wrap">
+      <div class="audio-img">
+        <img class="img" id="cover-img" alt="Music cover photo">
+      </div>
+      <div class="controllers">
+        <button class="btn" id="prev"><i class="fas fa-backward"></i></button>
+        <button class="btn" id="play"><i class="fas fa-play"></i></button>
+        <button class="btn" id="next"><i class="fas fa-forward"></i></button>
+        <div class="volume-wrap">
+          <div class="volume-container-wrap">
+            <div class="volume-container" id="volume-container">
+              <div class="volume-bar" id="volume-bar"></div>
+            </div>
+          </div>
+          <button class="btn volume" id="volume-btn"><i class="fas fa-volume-up"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script src="app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Speed Typer Game</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+  <div class="game-lavel-wrap">
+    <form>
+      <label for="dificult">Dificulty</label>
+      <select id="dificulty">
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+      </select>
+    </form>
+  </div>
+
+  <div class="game-container">
+    <h2 class="heading">🎇 Speed Typer 🎇</h2>
+    <div class="game-wrap">
+      <h3 class="word" id="word"></h3>
+      <label for="">Type the following word.</label>
+      <input type="text" autocomplete="off" placeholder="Type your text" class="text" id="text">
+      <div class="timer" id="timer"></div>
+      <div class="score" id="score"></div>
+    </div>
+
+    <div class="game-end-container" id="game-end-container"></div>
+  </div>
+
+  <div class="setting">
+    <button class="setting-btn" id="setting-btn"><i class="fas fa-cog"></i></button>
+  </div>
+
+
+  <script src="app.js"></script>
+  
+</body>
+</html>
