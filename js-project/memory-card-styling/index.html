@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memory Card</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+  <button class="btn btn-trash" id="trash">
+    <i class="fas fa-trash"></i>
+    Delete Card
+  </button>
+
+  <div class="container-wrap">
+    <h2 class="heading">
+      Memory Cards
+      <button class="btn btn-sm" id="add-new-card">
+        <i class="fas fa-plus"></i>
+        Add New Card
+      </button>
+    </h2>
+
+    <div class="cards" id="card-container">
+      <!-- <div class="card active">
+        <div class="inner-card">
+          <div class="inner-card-front">
+            <p>What is PHP?</p>
+          </div>
+          <div class="inner-card-back">
+            <p>PHP is a programing language.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="inner-card">
+          <div class="inner-card-front">
+            <p>What is JS?</p>
+          </div>
+          <div class="inner-card-back">
+            <p>JS is a programing language.</p>
+          </div>
+        </div>
+      </div> -->
+    </div>
+
+    <div class="navigation">
+      <button class="nav-btn btn" id="btn-prev">
+        <i class="fas fa-arrow-left"></i>
+      </button>
+      <p class="card-number" id="card-number"></p>
+      <button class="nav-btn btn" id="btn-next">
+        <i class="fas fa-arrow-right"></i>
+      </button>
+    </div>
+  </div>
+
+  <div class="add-container" id="add-container">
+    <h2 class="heading">
+      Memory Cards
+      <button class="btn btn-sm btn-close" id="close">
+        X
+      </button>
+    </h2>
+
+    <form class="new-card-form" id="new-card">
+      <div class="form-group">
+        <label for="quest">Add New Question</label>
+        <input type="text" name="quest" class="quest" id="quest" placeholder="New Question">
+      </div>
+      <div class="form-group">
+        <label for="ans">Add New Answer</label>
+        <textarea type="text" name="ans" placeholder="New Answer" class="ans" id="ans"></textarea>
+      </div>
+      <button type="submit" class="btn btn-submit">
+        <i class="fas fa-plus"></i>
+        Add Card
+      </button>
+    </form>
+  </div>
+
+
+  <script src="app.js"></script>
+  
+</body>
+</html>

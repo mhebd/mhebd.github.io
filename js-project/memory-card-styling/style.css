@@ -1,0 +1,231 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  flex-direction: column;
+  background: radial-gradient(pink, tomato 100%, salmon)
+}
+
+.btn {
+  border: 0px;
+  outline: none;
+  padding: 10px 15px;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.btn-sm {
+  font-size: 14px;
+  margin-left: 30px;
+}
+
+.btn-close {
+  background: transparent;
+  font-weight: 700;
+  color: red;
+}
+
+.btn-trash {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 40px;
+  color: whitesmoke;
+}
+
+.cards {
+  width: 400px;
+  height: 250px;
+  position: relative;
+  margin-bottom: 30px;
+  perspective: 1000px;
+}
+
+.card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: translateX(50%) rotateY(-10deg);
+  -webkit-transform: translateX(50%) rotateY(-10deg);
+  -moz-transform: translateX(50%) rotateY(-10deg);
+  -ms-transform: translateX(50%) rotateY(-10deg);
+  -o-transform: translateX(50%) rotateY(-10deg);
+  transition:  .4s ease;
+  -webkit-transition:  .4s ease;
+  -moz-transition:  .4s ease;
+  -ms-transition: transform .4s ease;
+  -o-transition:  .4s ease;
+}
+.card.active {
+  opacity: 1;
+  z-index: 10;
+  transform: translateX(0) rotateY(0deg);
+  -webkit-transform: translateX(0) rotateY(0deg);
+  -moz-transform: translateX(0) rotateY(0deg);
+  -ms-transform: translateX(0) rotateY(0deg);
+  -o-transform: translateX(0) rotateY(0deg);
+}
+.card.left {
+  transform: translateX(-50%) rotateY(10deg);
+  -webkit-transform: translateX(-50%) rotateY(10deg);
+  -moz-transform: translateX(-50%) rotateY(10deg);
+  -ms-transform: translateX(-50%) rotateY(10deg);
+  -o-transform: translateX(-50%) rotateY(10deg);
+}
+
+.inner-card {
+  cursor: pointer;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.24);
+  transform-style: preserve-3d;
+  transition: transform .4s ease;
+  -webkit-transition: transform .4s ease;
+  -moz-transition: transform .4s ease;
+  -ms-transition: transform .4s ease;
+  -o-transition: transform .4s ease;
+}
+
+.card.show-ans .inner-card {
+  transform: rotateX(180deg);
+  -webkit-transform: rotateX(180deg);
+  -moz-transform: rotateX(180deg);
+  -ms-transform: rotateX(180deg);
+  -o-transform: rotateX(180deg);
+}
+
+.inner-card-front, .inner-card-back {
+  backface-visibility: hidden;
+  position: absolute;
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+  padding: 10px;
+  -webkit-backface-visibility: hidden;
+}
+
+.inner-card-front {
+  transform: rotateX(0deg);
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  -ms-transform: rotateX(0deg);
+  -o-transform: rotateX(0deg);
+  z-index: 2;
+}
+
+.inner-card-back {
+  transform: rotateX(180deg);
+  -webkit-transform: rotateX(180deg);
+  -moz-transform: rotateX(180deg);
+  -ms-transform: rotateX(180deg);
+  -o-transform: rotateX(180deg);
+}
+
+.inner-card-front::after, 
+.inner-card-back::after {
+  content: '\f021  Flip';
+  font-family: 'Font Awesome 5 Free', Lato, sans-serif;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: .8em;
+  color: gray;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.add-container {
+  opacity: 0;
+  visibility: hidden;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  background: radial-gradient(pink, tomato 100%, salmon);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transform: all .3s ease;
+  -webkit-transform: all .3s ease;
+  -moz-transform: all .3s ease;
+  -ms-transform: all .3s ease;
+  -o-transform: all .3s ease;
+}
+
+.add-container.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.form-group {
+  margin-bottom: 30px;
+  min-width: 400px;
+  max-width: 100%;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1em;
+  color: gainsboro;
+}
+
+.form-group input {
+  border: 0px;
+  outline: none;
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+}
+
+.form-group textarea {
+  width: 100%;
+  height: 250px;
+  resize: none;
+  border: 0px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.btn-submit {
+  margin-left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
