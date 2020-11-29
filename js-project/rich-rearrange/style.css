@@ -1,0 +1,96 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+}
+
+h2 {
+  margin: 10px 0;
+}
+
+.draggable-list {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  border: 1px solid rgb(194, 194, 194);
+  list-style: none;
+}
+
+.draggable-list li:not(:last-of-type) {
+  border-bottom: 1px solid rgb(184, 184, 184);
+}
+
+.draggable-list li {
+  display: flex;
+}
+
+
+
+li span {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background: rgb(80, 80, 80);
+  color: #fff;
+  margin-right: 7px;
+  font-weight: 700;
+}
+
+.draggable {
+  line-height: 50px;
+  padding: 0 10px;
+  position: relative;
+  width: 190px;
+  background: rgba(255, 255, 255, 0.911);
+}
+
+.draggable-list li.over .draggable {
+  background: rgb(107, 107, 107) !important;
+}
+
+li.wrong .draggable .person-name {
+  color: red;
+}
+li.right .draggable .person-name {
+  color: green;
+}
+
+.draggable i {
+  display: block;
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.check-btn {
+  border: 0px;
+  outline: none;
+  background: rgb(80, 80, 80);
+  color: #fff;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.check-btn:active {
+  transform: scale(.95);
+  -webkit-transform: scale(.95);
+  -moz-transform: scale(.95);
+  -ms-transform: scale(.95);
+  -o-transform: scale(.95);
+}
+
+.check-btn:hover {
+  background: rgb(61, 61, 61);
+}
