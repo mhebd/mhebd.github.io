@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Speech To Text App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 class="heading">Speech To Text Apps</h1>
+    <p class="info">Input your voice into microphone</p>
+
+    <div class="languages">
+      <select name="" id="lang" class="lang"></select>
+    </div>
+
+    <span>
+      <button class="on-off" id="start">Start</button>
+      <button class="on-off" id="stop">Stop</button>
+      <button><span class="indicator"></span></button>
+    </span>
+
+    <div class="text-wrap">
+      <button class="clear" id="clear">X</button>
+      <textarea name="" id="text"></textarea>
+      <button class="copy" id="copy">Copy Text</button>
+    </div>
+
+    <br>
+    <br>
+
+    <small>
+      &copy; 
+      <script>
+        let y = new Date().getFullYear();
+        document.write(y);
+      </script>
+      <a href="http://mhebd.github.io/m-hassan" style="color: rgb(206, 205, 205); text-decoration: none;" target="_blank" rel="noopener noreferrer">M. Hassan</a>
+    </small>
+
+
+
+    <script src="app.js"></script>
+  </body>
+</html>
