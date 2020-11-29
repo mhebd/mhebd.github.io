@@ -1,0 +1,109 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0095dd;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1.2em;
+}
+
+.heading {
+  margin: 25px 0;
+}
+
+.btn {
+  padding: 5px 10px;
+  border: 0px;
+  outline: none;
+  background: #333333;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  transition: all .3s ease;
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  -ms-transition: all .3s ease;
+  -o-transition: all .3s ease;
+}
+
+.btn:hover {
+  background: #000;
+}
+
+.btn:active {
+  transform: scale(.95);
+  -webkit-transform: scale(.95);
+  -moz-transform: scale(.95);
+  -ms-transform: scale(.95);
+  -o-transform: scale(.95);
+}
+
+.btn-rules {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.rules {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 350px;
+  background: #222222;
+  transform: translateX(-350px);
+  -webkit-transform: translateX(-350px);
+  -moz-transform: translateX(-350px);
+  -ms-transform: translateX(-350px);
+  -o-transform: translateX(-350px);
+  transition: .6s ease-in;
+  -webkit-transition: .6s ease-in;
+  -moz-transition: .6s ease-in;
+  -ms-transition: .6s ease-in;
+  -o-transition: .6s ease-in;
+  padding: 20px;
+}
+
+.rules.show {
+  transform: translateX(0);
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+}
+
+.rules h3 {
+  margin-bottom: 30px;
+}
+.rules p {
+  margin-bottom: 10px;
+}
+.rules .btn-close {
+  margin-top: 20px;
+}
+
+
+.canvas {
+  background: #fff;
+  margin: 15px;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+  display: block;
+}
