@@ -7,6 +7,7 @@ const domEl = {
   closeBtn : document.getElementById('close'),
   sitesBtn : document.getElementById('sites'),
   sitesContainer : document.getElementById('sites-container'),
+  avatarCon : document.getElementById('avatar-wrap'),
   greetings : document.getElementById('greetings'),
   usrNameEl : document.getElementById('user-name'),
   dateEl : document.getElementById('date'),
@@ -30,6 +31,7 @@ function events() {
   setDate();
   setTime();
   setBackground();
+  setAvatar();
 
   others();
 };
@@ -52,6 +54,12 @@ function setInfo(e) {
   e.preventDefault();
   const name = domEl.editForm.name.value;
   const bgs = domEl.editForm.bgs.value;
+  const input = document.getElementById("picture");
+  const fReader = new FileReader();
+  fReader.readAsDataURL(input.files[0]);
+  fReader.onloadend = function(event){
+    localStorage.setItem('picture', event.target.result);
+  };
 
   localStorage.setItem('name', name);
   localStorage.setItem('bgChanges', bgs);
@@ -87,7 +95,12 @@ function setGreetings() {
 // Set user name into dom
 function setUserName() {
   domEl.usrNameEl.innerText = userName;
-} 
+};
+
+function setAvatar() {
+  const picUrl = localStorage.getItem('picture') !== null ? localStorage.getItem('picture') : 'img/16.jpg';
+  domEl.avatarCon.innerHTML = `<img src="${picUrl}" alt="Your Avatar" class="avatar">`;
+}
 
 // Set date into dom
 function setDate() {

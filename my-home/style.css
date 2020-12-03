@@ -60,8 +60,12 @@ body {
 
 .edit-btn {
   position: absolute;
-  right: 20px;
-  bottom: 20px;
+  left: 20px;
+  top: 20px;
+  border: 0px;
+}
+.edit-btn:hover {
+  background: rgba(0, 0, 0, 0.397);
 }
 
 .edit-form {
@@ -146,9 +150,29 @@ body {
   margin-left: 2px;
 }
 
+.form-group .picture {
+  padding: 10px;
+  background: #000;
+  cursor: pointer;
+}
+
 .form .submit {
   float: right;
   overflow: hidden;
+}
+
+.avatar-wrap {
+  margin: 40px;
+}
+
+.avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
 }
 
 .text {
@@ -255,6 +279,10 @@ body {
 
 
 @media (max-width: 600px) {
+  .avatar {
+    width: 120px;
+    height: 120px;
+  }
   .text {
     font-size: 1.1em;
   }
