@@ -147,8 +147,8 @@ function setBackground() {
       radial-gradient(rgba(0, 0, 0, 0.527), transparent), url(img/${image}.jpg)
     `;
   } else if( bgChanges === 'daily' ) {
-    const img = date.getDate();
-    img > 18 ? img - 18 : img;
+    let img = date.getDate();
+    img = img > 18 ? img - 18 : img;
     document.body.style.backgroundImage = `
       radial-gradient(rgba(0, 0, 0, 0.527), transparent), url(img/${img}.jpg)
     `;
