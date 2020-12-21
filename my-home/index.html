@@ -23,6 +23,10 @@
         <p class="heading">Your Name</p>
         <input type="text" name="name" class="name" id="name" value="Your Name">
       </div>
+      <div class="form-group">
+        <p class="heading">Your Location</p>
+        <input type="text" name="location" id="location" class="location" value="Kushtia">
+      </div>
       <div class="form-group bgs">
         <p class="heading">Background Change</p>
         <input type="radio" name="bgs" id="daily" value="daily">
@@ -57,11 +61,24 @@
     <!-- 10:20:30 AM -->
   </div>
 
+  <!-- Weather view container -->
+  <div class="weather-wrap" id="weather">
+    <p class="lead">
+      <span class="icon">
+        <!-- <i class="fas fa-sun"></i> -->
+      </span>
+      <span class="temp"></span> &#8451;
+    </p>
+  </div>
 
+
+  <!-- Website link toggle button -->
   <button class="btn sites-btn" id="sites">
     <i class="fas fa-th"></i>
   </button>
 
+
+  <!-- All sites container -->
   <div class="sites-container" id="sites-container">
     <div class="sites">
       <div class="site">

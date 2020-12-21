@@ -139,7 +139,7 @@ body {
   font-size: 1.1em;
 }
 
-.form-group .name {
+.form-group .name, .form-group .location {
   width: 100%;
   padding: 7px 10px;
   font-size: 1em;
@@ -181,6 +181,25 @@ body {
   font-style: italic;
   margin-bottom: 15px;
   font-family: var(--font3);
+}
+
+.weather-wrap {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.137);
+  padding: 30px;
+  border-radius: 0 0 0 100px;
+  -webkit-border-radius: 0 0 0 100px;
+  -moz-border-radius: 0 0 0 100px;
+  -ms-border-radius: 0 0 0 100px;
+  -o-border-radius: 0 0 0 100px;
+  font-size: 1.6em;
+  color: #bada55;
+}
+
+.weather-wrap .icon {
+  margin-right: 10px;
 }
 
 .sites-btn {
@@ -285,5 +304,8 @@ body {
   }
   .text {
     font-size: 1.1em;
+  }
+  .weather-wrap {
+    font-size: 1.2em;
   }
 }

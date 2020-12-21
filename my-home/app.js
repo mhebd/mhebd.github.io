@@ -11,7 +11,9 @@ const domEl = {
   greetings : document.getElementById('greetings'),
   usrNameEl : document.getElementById('user-name'),
   dateEl : document.getElementById('date'),
-  timeEl : document.getElementById('time')
+  timeEl : document.getElementById('time'),
+  tempEl : document.querySelector('.temp'),
+  iconEl : document.querySelector('.icon')
 };
 
 // Declear date object
@@ -32,6 +34,8 @@ function events() {
   setTime();
   setBackground();
   setAvatar();
+  getLocation();
+  setWeather();
 
   others();
 };
@@ -54,6 +58,7 @@ function setInfo(e) {
   e.preventDefault();
   const name = domEl.editForm.name.value;
   const bgs = domEl.editForm.bgs.value;
+  const location = domEl.editForm.location.value;
   const input = document.getElementById("picture");
   const fReader = new FileReader();
   fReader.readAsDataURL(input.files[0]);
@@ -63,6 +68,7 @@ function setInfo(e) {
 
   localStorage.setItem('name', name);
   localStorage.setItem('bgChanges', bgs);
+  localStorage.setItem('location', location);
   domEl.editFormCon.classList.remove('show');
   window.location.reload();
 }
@@ -77,6 +83,39 @@ function getUserName() {
   // Set user name form localstorage
   return userName = localStorage.getItem('name') !== null ? localStorage.getItem('name') : 'Your Name';
 };
+
+// Get location
+function getLocation() {
+  // Set location from localstorage
+  return locationName = localStorage.getItem('location') !== null ? localStorage.getItem('location') : 'Kushtia';
+}
+
+function setWeather() {
+  const key = 'f9a9bb6567b443dabf5102430202112';
+  const loc = locationName;
+  getTemp();
+
+  async function getTemp() {
+    const res = await fetch(`http://api.weatherapi.com/v1/current.json?key=${key}&q=${loc}
+    `);
+    const data = await res.json();
+    const tempC = data.current.temp_c;
+    const day = data.current.is_day;
+
+    setTemp(tempC);
+    setIcon(day);
+  }
+}
+
+// Set tempareture
+function setTemp(t) {
+  domEl.tempEl.innerText = t;
+}
+
+// Set Icon 
+function setIcon(i) {
+  domEl.iconEl.innerHTML = (i === 1 ? '<im class="fas fa-sun"></img>': '<i class="fas fa-moon"></i>');
+}
 
 // Set greetings 
 function setGreetings() {
@@ -159,6 +198,7 @@ function setBackground() {
 // Others funtionality
 function others() {
   domEl.editForm.name.value = userName;
+  domEl.editForm.location.value= locationName;
 };
 
 
