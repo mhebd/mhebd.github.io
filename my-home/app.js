@@ -96,7 +96,7 @@ function setWeather() {
   getTemp();
 
   async function getTemp() {
-    const res = await fetch(`http://api.weatherapi.com/v1/current.json?key=${key}&q=${loc}
+    const res = await fetch(`https://api.weatherapi.com/v1/current.json?key=${key}&q=${loc}
     `);
     const data = await res.json();
     const tempC = data.current.temp_c;
