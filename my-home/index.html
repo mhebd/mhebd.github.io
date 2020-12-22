@@ -67,11 +67,43 @@
       <span class="icon">
         <!-- <i class="fas fa-sun"></i> -->
       </span>
-      <span class="temp"></span> &#8451;
+      <span class="temp" style="color: #fff;"></span> &#8451;
     </p>
   </div>
 
-  
+  <div class="todo-wrap" id="todo-container">
+    <h3 class="todo-heading">My ToDo List <button class="btn add-btn" id="todo-add"><i class="fas fa-plus"></i></button></h3>
+    <ul class="todo-list" id="todo">
+
+      <li class="todo-item" data-id="01">
+        <p class="lead">Read More & More</p>
+        <p class="small">12 Dec, 2020 | 12:12:12 PM</p>
+        <div class="delete-btn">
+          <button class="btn del-btn close-btn">X</button>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="todo-form-wrap" id="tf-container">
+    <div class="tf-card">
+      <button class="btn close-btn" id="todo-close">X</button>
+      <div class="tf-card-h">
+        <h3>What is your main focus today?</h3>
+      </div>
+      <div class="tf-card-b">
+        <form id="todo-form">
+          <div class="form-group">
+            <p class="heading">Enter your task info</p>
+            <input type="text" name="task" placeholder="Your task info." id="task" class="task">
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn ts-btn">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 
 
   <!-- Website link toggle button -->

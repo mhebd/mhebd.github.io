@@ -6,6 +6,7 @@
   --font1 : 'Lato', sans-serif;
   --font2 : 'Courgette', cursive;
   --font3 : 'Lobster', cursive;
+  --tdbg : rgba(0, 0, 0, 0.363);
 }
 
 * {
@@ -187,7 +188,7 @@ body {
   position: absolute;
   top: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.137);
+  background: rgba(0, 0, 0, 0.404);
   padding: 30px;
   border-radius: 0 0 0 100px;
   -webkit-border-radius: 0 0 0 100px;
@@ -201,6 +202,168 @@ body {
 .weather-wrap .icon {
   margin-right: 10px;
 }
+
+.todo-wrap {
+  width: 300px;
+  padding: 10px;
+  position: absolute;
+  right: 100px;
+  max-height: 500px;
+}
+
+
+.todo-wrap .todo-heading {
+  height: 60px;
+  background: var(--tdbg);
+  color:rgba(255, 255, 255, 0.952);
+  line-height: 60px;
+  font-size: 1.5em;
+  font-weight: 700;
+  position: relative;
+  padding: 0 10px;
+  font-family: var(--font3);
+}
+
+.add-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  font-size: 1em;
+  color: #bada55;
+  border: 1;
+  background: transparent;
+}
+
+.todo-list {
+  list-style: none;
+  max-height: 440px;
+  overflow-y: scroll;
+}
+
+.todo-list::-webkit-scrollbar {
+  width: 0em;
+}
+
+.todo-list li {
+  color: #000;
+  padding: 10px;
+  position: relative;
+  overflow: hidden;
+  background: var(--tdbg);
+  color: #fff;
+  font-family: var(--font2);
+  /* text-align: justify; */
+}
+
+.todo-list li:nth-child(even) {
+  transform: perspective(100px) rotateX(3deg) translateY(2px) scale(1.001);
+  -webkit-transform: perspective(100px) rotateX(3deg) translateY(2px) scale(1.001);
+  -moz-transform: perspective(100px) rotateX(3deg) translateY(2px) scale(1.001);
+  -ms-transform: perspective(100px) rotateX(3deg) translateY(2px) scale(1.001);
+  -o-transform: perspective(100px) rotateX(3deg) translateY(2px) scale(1.001);
+}
+
+.todo-list li:nth-child(odd) {
+  transform: perspective(100px) rotateX(-3deg) translateY(3px);
+  -webkit-transform: perspective(100px) rotateX(-3deg) translateY(3px);
+  -moz-transform: perspective(100px) rotateX(-3deg) translateY(3px);
+  -ms-transform: perspective(100px) rotateX(-3deg) translateY(3px);
+  -o-transform: perspective(100px) rotateX(-3deg) translateY(3px);
+}
+
+
+.todo-list li .lead {
+  font-size: 1.2em;
+  padding-bottom: 10px;
+}
+
+.todo-list li .small {
+  font-size: 12px;
+}
+
+.delete-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 13px 10px;
+  transition: all .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  -moz-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  -o-transform: translateX(100%);
+  -webkit-transition: all .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  -moz-transition: all .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  -ms-transition: all .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  -o-transition: all .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.todo-list li:hover .delete-btn {
+  transform: translateX(0);
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+}
+
+.todo-form-wrap {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.623);
+  visibility: hidden;
+  opacity: 0;
+  transition: .3s ease;
+  -webkit-transition: .3s ease;
+  -moz-transition: .3s ease;
+  -ms-transition: .3s ease;
+  -o-transition: .3s ease;
+}
+
+.todo-form-wrap.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tf-card {
+  background: #fff;
+  padding: 20px;
+  color: #403d41;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  position: relative;
+}
+
+.tf-card-h {
+  margin-bottom: 15px;
+  font-size: 1.5em;
+}
+
+.tf-card-b .task {
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  background: rgba(0, 0, 0, 0.075);
+  outline: none;
+  border: 0px;
+}
+
+
+.ts-btn {
+  float: right;
+}
+
 
 .sites-btn {
   position: absolute;
@@ -296,7 +459,32 @@ body {
 .fa-github { color: #363636;}
 .fa-medium { color: #141414;}
 
-
+@media (max-width: 1200px) {
+  .todo-wrap {
+    right: 30px;
+  }
+}
+@media (max-width: 992px) {
+  .todo-wrap {
+    transition: transform .3s ease;
+    transform: translateX(90%);
+    -webkit-transform: translateX(90%);
+    -moz-transform: translateX(90%);
+    -ms-transform: translateX(90%);
+    -o-transform: translateX(90%);
+    -webkit-transition: transform .3s ease;
+    -moz-transition: transform .3s ease;
+    -ms-transition: transform .3s ease;
+    -o-transition: transform .3s ease;
+}
+  .todo-wrap:hover {
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+  }
+}
 @media (max-width: 600px) {
   .avatar {
     width: 120px;
@@ -307,5 +495,7 @@ body {
   }
   .weather-wrap {
     font-size: 1.2em;
+  }
+  .todo-wrap {
   }
 }
