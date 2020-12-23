@@ -7,6 +7,7 @@
   --font2 : 'Courgette', cursive;
   --font3 : 'Lobster', cursive;
   --tdbg : rgba(0, 0, 0, 0.363);
+  --btn-bg: rgb(255, 0, 119);
 }
 
 * {
@@ -41,7 +42,7 @@ body {
 .btn {
   padding: 7px 25px;
   border: 2px solid rgba(0, 0, 0, 0.397);
-  background: rgba(49, 49, 49, 0.555);
+  background: var(--btn-bg);
   color: rgb(207, 197, 197);
   border-radius: 20px;
   -webkit-border-radius: 20px;
@@ -49,6 +50,10 @@ body {
   -ms-border-radius: 20px;
   -o-border-radius: 20px;
   cursor: pointer;
+}
+
+.btn:hover {
+  opacity: .8;
 }
 
 .btn:active {
@@ -64,9 +69,6 @@ body {
   left: 20px;
   top: 20px;
   border: 0px;
-}
-.edit-btn:hover {
-  background: rgba(0, 0, 0, 0.397);
 }
 
 .edit-form {
@@ -196,7 +198,7 @@ body {
   -ms-border-radius: 0 0 0 100px;
   -o-border-radius: 0 0 0 100px;
   font-size: 1.6em;
-  color: #bada55;
+  color: var(--btn-bg);
 }
 
 .weather-wrap .icon {
@@ -232,7 +234,7 @@ body {
   height: 40px;
   padding: 0;
   font-size: 1em;
-  color: #bada55;
+  color: var(--btn-bg);
   border: 1;
   background: transparent;
 }
@@ -371,6 +373,7 @@ body {
   border: 0px;
   background: transparent;
   font-size: 1.7em;
+  color: var(--btn-bg);
 }
 
 .sites-container {

@@ -101,10 +101,12 @@ const basicSetting = (() => {
       `);
       const data = await res.json();
       const tempC = data.current.temp_c;
-      const day = data.current.is_day;
+      const icon = data.current.is_day;
+      console.table(data.current);
+      console.table(data.location);
 
       setTemp(tempC);
-      setIcon(day);
+      setIcon(icon);
     }
   }
 
@@ -159,18 +161,20 @@ const basicSetting = (() => {
   // Set time into dom
   function setTime() {
     setInterval(() => {
-      let date = new Date();
-      let h = date.getHours();
-      let m = date.getMinutes();
-      let s = date.getSeconds();
-      let status = h >= 12 ? 'PM' : 'AM';
+      // let date = new Date();
+      // let h = date.getHours();
+      // let m = date.getMinutes();
+      // let s = date.getSeconds();
+      // let status = h >= 12 ? 'PM' : 'AM';
       
-      h = h > 12 ? h - 12 : h;
-      h = h < 10 ? '0' + h : h;
-      m = m < 10 ? '0' + m : m;
-      s = s < 10 ? '0' + s : s;
+      // h = h > 12 ? h - 12 : h;
+      // h = h < 10 ? '0' + h : h;
+      // m = m < 10 ? '0' + m : m;
+      // s = s < 10 ? '0' + s : s;
       
-      domEl.timeEl.innerText = `${h} : ${m} : ${s} ${status}`;
+      // domEl.timeEl.innerText = `${h} : ${m} : ${s} ${status}`;
+
+      domEl.timeEl.innerText = new Date().toLocaleTimeString();
     }, 1000);
   };
 
@@ -296,7 +300,6 @@ const todoListSetting = (() => {
   function setListToDom() {
     const html = listItems.map(item => {
       return `<li class="todo-item" data-id="${item.id}">
-        
         <p class="lead">${item.task}</p>
         <p class="small">${item.date} | ${item.time}</p>
         <div class="delete-btn">
