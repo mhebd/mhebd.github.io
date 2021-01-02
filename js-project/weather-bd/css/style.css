@@ -339,6 +339,12 @@ body button:active {
   .date-time {
     padding: 20px 0;
   }
+
+  #search-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 @media (min-width: 450px) {
