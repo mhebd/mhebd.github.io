@@ -101,7 +101,7 @@ const basicSetting = (() => {
       `);
       const data = await res.json();
       const tempC = data.current.temp_c;
-      const icon = data.current.is_day;
+      const icon = data.current.condition.icon;
       console.table(data.current);
       console.table(data.location);
 
@@ -117,7 +117,7 @@ const basicSetting = (() => {
 
   // Set Icon 
   function setIcon(i) {
-    domEl.iconEl.innerHTML = (i === 1 ? '<im class="fas fa-sun"></img>': '<i class="fas fa-moon"></i>');
+    domEl.iconEl.innerHTML = `<img src="${i}" alt="Weather Icon">`;
   }
 
   // Set greetings 
@@ -185,14 +185,14 @@ const basicSetting = (() => {
     document.getElementById(bgChanges).checked = true;
 
     if( bgChanges === 'always' ) {
-      const imageNumber = 18;
+      const imageNumber = 31;
       const image = Math.floor(Math.random() * imageNumber) + 1;
       document.body.style.backgroundImage = `
         radial-gradient(rgba(0, 0, 0, 0.527), transparent), url(img/${image}.jpg)
       `;
     } else if( bgChanges === 'daily' ) {
       let img = date.getDate();
-      img = img > 18 ? img - 18 : img;
+      // img = img > 18 ? img - 18 : img;
       document.body.style.backgroundImage = `
         radial-gradient(rgba(0, 0, 0, 0.527), transparent), url(img/${img}.jpg)
       `;
