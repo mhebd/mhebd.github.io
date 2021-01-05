@@ -191,7 +191,7 @@ body {
   top: 0;
   right: 0;
   background: rgba(0, 0, 0, 0.404);
-  padding: 30px;
+  padding: 12px;
   border-radius: 0 0 0 100px;
   -webkit-border-radius: 0 0 0 100px;
   -moz-border-radius: 0 0 0 100px;
@@ -498,7 +498,5 @@ body {
   }
   .weather-wrap {
     font-size: 1.2em;
-  }
-  .todo-wrap {
   }
 }
