@@ -2,13 +2,7 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
-:root {
-  --font1 : 'Lato', sans-serif;
-  --font2 : 'Courgette', cursive;
-  --font3 : 'Lobster', cursive;
-  --tdbg : rgba(0, 0, 0, 0.363);
-  --btn-bg: rgb(255, 0, 119);
-}
+
 
 * {
   margin: 0;
@@ -90,6 +84,7 @@ body {
   -moz-transition: .3s ease;
   -ms-transition: .3s ease;
   -o-transition: .3s ease;
+  z-index: 50;
 }
 
 .edit-form.show {
@@ -156,6 +151,7 @@ body {
 .form-group .picture {
   padding: 10px;
   background: #000;
+  color: #fff;
   cursor: pointer;
 }
 
@@ -166,11 +162,10 @@ body {
 
 .avatar-wrap {
   margin: 40px;
-}
-
-.avatar {
+  position: relative;
   width: 200px;
   height: 200px;
+  overflow: hidden;
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -178,11 +173,74 @@ body {
   -o-border-radius: 50%;
 }
 
+.avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  object-fit: cover;
+}
+
+.ac-btn {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  background: rgba(0, 0, 0, 0.671);
+  bottom: -60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .3s ease-in;
+  -webkit-transition: .3s ease-in;
+  -moz-transition: .3s ease-in;
+  -ms-transition: .3s ease-in;
+  -o-transition: .3s ease-in;
+}
+
+.avatar-wrap:hover .ac-btn {
+  bottom: 0;
+}
+ 
+.ac-btn .btn {
+  background: transparent;
+  border: 0px;
+  color: var(--btn-bg);
+}
+
+.avatar-form-wrap {
+  background: #fff;
+  padding: 30px 15px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  color: #000;
+  position: absolute;
+  z-index: 100;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  -webkit-transition: opacity .3s ease-in-out;
+  -moz-transition: opacity .3s ease-in-out;
+  -ms-transition: opacity .3s ease-in-out;
+  -o-transition: opacity .3s ease-in-out;
+}
+
+.avatar-form-wrap.show {
+  visibility: visible;
+  opacity: 1;
+}
+
 .text {
   font-size: 2.5em;
   letter-spacing: 2px;
   font-style: italic;
   margin-bottom: 15px;
+  color: var(--text-color);
   font-family: var(--font3);
 }
 
@@ -190,7 +248,7 @@ body {
   position: absolute;
   top: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.404);
+  background: rgba(0, 0, 0, 0.281);
   padding: 12px;
   border-radius: 0 0 0 100px;
   -webkit-border-radius: 0 0 0 100px;
@@ -217,13 +275,14 @@ body {
 .todo-wrap .todo-heading {
   height: 60px;
   background: var(--tdbg);
-  color:rgba(255, 255, 255, 0.952);
+  color: var(--text-color);
   line-height: 60px;
   font-size: 1.5em;
   font-weight: 700;
   position: relative;
   padding: 0 10px;
   font-family: var(--font3);
+  box-shadow: 0px 2px 10px #000;
 }
 
 .add-btn {
@@ -250,7 +309,6 @@ body {
 }
 
 .todo-list li {
-  color: #000;
   padding: 10px;
   position: relative;
   overflow: hidden;
@@ -258,23 +316,30 @@ body {
   color: #fff;
   font-family: var(--font2);
   /* text-align: justify; */
+  margin-top: 5px;
+  margin-bottom: 17px;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
 }
 
-.todo-list li:nth-child(even) {
+/* .todo-list li:nth-child(even) {
   transform: perspective(100px) rotateX(3deg) translateY(2px) scale(1.001);
   -webkit-transform: perspective(100px) rotateX(3deg) translateY(2px) scale(1.001);
   -moz-transform: perspective(100px) rotateX(3deg) translateY(2px) scale(1.001);
   -ms-transform: perspective(100px) rotateX(3deg) translateY(2px) scale(1.001);
   -o-transform: perspective(100px) rotateX(3deg) translateY(2px) scale(1.001);
-}
+} */
 
-.todo-list li:nth-child(odd) {
+/* .todo-list li:nth-child(odd) {
   transform: perspective(100px) rotateX(-3deg) translateY(3px);
   -webkit-transform: perspective(100px) rotateX(-3deg) translateY(3px);
   -moz-transform: perspective(100px) rotateX(-3deg) translateY(3px);
   -ms-transform: perspective(100px) rotateX(-3deg) translateY(3px);
   -o-transform: perspective(100px) rotateX(-3deg) translateY(3px);
-}
+} */
 
 
 .todo-list li .lead {
@@ -284,6 +349,7 @@ body {
 
 .todo-list li .small {
   font-size: 12px;
+  border-top: 1px solid rgba(0, 0, 0, 0.315);
 }
 
 .delete-btn {
@@ -489,7 +555,7 @@ body {
   }
 }
 @media (max-width: 600px) {
-  .avatar {
+  .avatar-wrap {
     width: 120px;
     height: 120px;
   }

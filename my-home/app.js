@@ -14,7 +14,11 @@ const basicSetting = (() => {
     dateEl : document.getElementById('date'),
     timeEl : document.getElementById('time'),
     tempEl : document.querySelector('.temp'),
-    iconEl : document.querySelector('.icon')
+    iconEl : document.querySelector('.icon'),
+    avatarFormWrap : document.querySelector('.avatar-form-wrap'),
+    avatarForm : document.getElementById('avatar-form'),
+    aCBtn : document.getElementById('ac-btn'),
+    aFClose : document.getElementById('af-close')
   };
 
   // Declear date object
@@ -27,6 +31,9 @@ const basicSetting = (() => {
     domEl.editForm.addEventListener('submit', setInfo);
     domEl.closeBtn.addEventListener('click', hideFormCon);
     domEl.sitesBtn.addEventListener('click', sitesContainerToggle);
+    domEl.aCBtn.addEventListener('click', avatarFormShow);
+    domEl.aFClose.addEventListener('click', avatarFormHide);
+    domEl.avatarForm.addEventListener('submit', setImageIntoLocStg);
 
     getUserName()
     setGreetings();
@@ -37,6 +44,7 @@ const basicSetting = (() => {
     setAvatar();
     getLocation();
     setWeather();
+    setColor();
 
     others();
   };
@@ -57,19 +65,16 @@ const basicSetting = (() => {
   // Set all info from form
   function setInfo(e) {
     e.preventDefault();
-    const name = domEl.editForm.name.value;
-    const bgs = domEl.editForm.bgs.value;
-    const location = domEl.editForm.location.value;
-    const input = document.getElementById("picture");
-    const fReader = new FileReader();
-    fReader.readAsDataURL(input.files[0]);
-    fReader.onloadend = function(event){
-      localStorage.setItem('picture', event.target.result);
-    };
+    const data = {};
+    data.name = domEl.editForm.name.value;
+    data.bgs = domEl.editForm.bgs.value;
+    data.location = domEl.editForm.location.value;
+    data.color1 = domEl.editForm.color1.value;
+    data.color2 = domEl.editForm.color2.value;
 
-    localStorage.setItem('name', name);
-    localStorage.setItem('bgChanges', bgs);
-    localStorage.setItem('location', location);
+    console.log(data);
+
+    localStorage.setItem('data', JSON.stringify(data));
     domEl.editFormCon.classList.remove('show');
     window.location.reload();
   }
@@ -82,13 +87,17 @@ const basicSetting = (() => {
   // Get user name 
   function getUserName() {
     // Set user name form localstorage
-    return userName = localStorage.getItem('name') !== null ? localStorage.getItem('name') : 'Your Name';
+    const data = localStorage.getItem('data');
+
+    return userName = JSON.parse(data).name !== null ? JSON.parse(data).name : 'Your Name';
   };
 
   // Get location
   function getLocation() {
     // Set location from localstorage
-    return locationName = localStorage.getItem('location') !== null ? localStorage.getItem('location') : 'Kushtia';
+    const data = localStorage.getItem('data');
+
+    return locationName = JSON.parse(data).location !== null ? JSON.parse(data).location : 'Kushtia';
   }
 
   function setWeather() {
@@ -181,7 +190,9 @@ const basicSetting = (() => {
 
   // Set Background image
   function setBackground() {
-    const bgChanges = localStorage.getItem('bgChanges') !== null ? localStorage.getItem('bgChanges') : 'always';
+    const data = localStorage.getItem('data');
+
+    const bgChanges = JSON.parse(data).bgs !== null ? JSON.parse(data).bgs : 'always';
     document.getElementById(bgChanges).checked = true;
 
     if( bgChanges === 'always' ) {
@@ -198,6 +209,43 @@ const basicSetting = (() => {
       `;
     };
   };
+
+  // Avatar form show
+  function avatarFormShow() {
+    domEl.avatarFormWrap.classList.add('show');
+  }
+
+  // Avatar form Hide
+  function avatarFormHide() {
+    domEl.avatarFormWrap.classList.remove('show');
+  }
+
+  // Set Image Into Localstorage
+  function setImageIntoLocStg(e) {
+    e.preventDefault();
+    const input = document.getElementById("picture");
+    const fReader = new FileReader();
+    fReader.readAsDataURL(input.files[0]);
+    fReader.onloadend = function(event){
+      localStorage.setItem('picture', event.target.result);
+    };
+    avatarFormHide();
+    window.location.reload();
+  }
+
+  // Set color for this site
+  function setColor() {
+    const data = localStorage.getItem('data');
+
+    const btnBg = JSON.parse(data).color1 !== null ? JSON.parse(data).color1 : '#ff0077';
+    const textColor = JSON.parse(data).color2 !== null ? JSON.parse(data).color2 : '#fff';
+
+    domEl.editForm.color1.value = btnBg;
+    domEl.editForm.color2.value = textColor;
+
+    document.documentElement.style.setProperty('--btn-bg', btnBg);
+    document.documentElement.style.setProperty('--text-color', textColor);
+  }
 
 
   // Others funtionality

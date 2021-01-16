@@ -1,186 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home Tab</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Tab</title>
 
-  <link rel="shortcut icon" href="img/home.png" type="image/x-icon">
+    <link rel="shortcut icon" href="img/home.png" type="image/x-icon" />
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
 
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <style>
+      :root {
+        --font1 : 'Lato', sans-serif;
+        --font2 : 'Courgette', cursive;
+        --font3 : 'Lobster', cursive;
+        --tdbg : rgba(0, 0, 0, 0.308);
+        --btn-bg: #ff0077;
+        --text-color: #fff;
+      }
+    </style>
 
-  <button class="btn edit-btn" id="edit">
-    <i class="fas fa-cog"></i>
-  </button>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <button class="btn edit-btn" id="edit">
+      <i class="fas fa-cog"></i>
+    </button>
 
-  <div class="edit-form" id="edit-form">
-    <form class="form" name="form" id="form">
-      <button class="btn close-btn" id="close">X</button>
-      <h3>Set Your Information</h3>
-      <div class="form-group user-name">
-        <p class="heading">Your Name</p>
-        <input type="text" name="name" class="name" id="name" value="Your Name">
-      </div>
-      <div class="form-group">
-        <p class="heading">Your Location</p>
-        <input type="text" name="location" id="location" class="location" value="Kushtia">
-      </div>
-      <div class="form-group bgs">
-        <p class="heading">Background Change</p>
-        <input type="radio" name="bgs" id="daily" value="daily">
-        <label for="daily">Daily</label>
-        <input type="radio" name="bgs" id="always" value="always">
-        <label for="always">Always</label>
-      </div>
-      <div class="form-group">
-        <p class="heading">Your Avatar</p>
-        <input type="file" name="picture" class="picture" id="picture">
-      </div>
-
-      <button type="submit" class="submit btn">Submit</button>
-    </form>
-  </div>
-
-
-  <div class="avatar-wrap" id="avatar-wrap">
-    <!-- <img src="" alt="Your Avatar" class="avatar"> -->
-  </div>
-  <div class="greetings text" id="greetings">
-    <!-- Good Morning! -->
-  </div>
-  <div class="name text" id="user-name">
-    <!-- Md. Mehedi Hassan -->
-  </div>
-
-  <div class="date text" id="date">
-    <!-- Sunday- January 20, 2020 -->
-  </div>
-  <div class="time text" id="time">
-    <!-- 10:20:30 AM -->
-  </div>
-
-  <!-- Weather view container -->
-  <div class="weather-wrap" id="weather">
-    <div style="display: flex; justify-content: center; align-items: center;" class="lead">
-      <p style="display: inline-block;" class="icon">
-        <!-- <img src="" alt="Weather Icon"> -->
-    </p>
-      <span class="temp" style="color: #fff;"></span> <span> &#8451;</span>
-    </div>
-  </div>
-
-  <div class="todo-wrap" id="todo-container">
-    <h3 class="todo-heading">My ToDo List <button class="btn add-btn" id="todo-add"><i class="fas fa-plus"></i></button></h3>
-    <ul class="todo-list" id="todo">
-
-      <li class="todo-item" data-id="01">
-        <p class="lead">Read More & More</p>
-        <p class="small">12 Dec, 2020 | 12:12:12 PM</p>
-        <div class="delete-btn">
-          <button class="btn del-btn close-btn">X</button>
+    <div class="edit-form" id="edit-form">
+      <form class="form" name="form" id="form">
+        <button class="btn close-btn" id="close">X</button>
+        <h3>Set Your Information</h3>
+        <div class="form-group user-name">
+          <p class="heading">Your Name</p>
+          <input
+            type="text"
+            name="name"
+            class="name"
+            id="name"
+            value="Your Name"
+          />
         </div>
-      </li>
-    </ul>
-  </div>
+        <div class="form-group">
+          <p class="heading">Your Location</p>
+          <input
+            type="text"
+            name="location"
+            id="location"
+            class="location"
+            value="Kushtia"
+          />
+        </div>
+        <div class="form-group bgs">
+          <p class="heading">Background Change</p>
+          <input type="radio" name="bgs" id="daily" value="daily" />
+          <label for="daily">Daily</label>
+          <input type="radio" name="bgs" id="always" value="always" />
+          <label for="always">Always</label>
+        </div>
+        <div class="form-group">
+          <p class="heading">Main Color</p>
+          <input type="color" name="color1" id="color1" class="color1">
+        </div>
+        <div class="form-group">
+          <p class="heading">Text Color</p>
+          <input type="color" name="color2" id="color2" class="color2">
+        </div>
 
-  <div class="todo-form-wrap" id="tf-container">
-    <div class="tf-card">
-      <button class="btn close-btn" id="todo-close">X</button>
-      <div class="tf-card-h">
-        <h3>What is your main focus today?</h3>
+        <button type="submit" class="submit btn">Submit</button>
+      </form>
+    </div>
+
+    <div class="avatar-form-wrap">
+      <button class="btn close-btn" id="af-close">X</button>
+      <form id="avatar-form" class="form">
+        <div class="form-group">
+          <p class="heading">Change Avatar</p>
+          <input type="file" name="picture" class="picture" id="picture" />
+        </div>
+
+        <button type="submit" class="submit btn">Save</button>
+      </form>
+    </div>
+
+    <div class="avatar-wrap">
+      <div id="avatar-wrap">
+        <!-- <img src="" alt="Your Avatar" class="avatar"> -->
       </div>
-      <div class="tf-card-b">
-        <form id="todo-form">
-          <div class="form-group">
-            <p class="heading">Enter your task info</p>
-            <input type="text" name="task" placeholder="Your task info." id="task" class="task">
-          </div>
-          <div class="form-group">
-            <button type="submit" class="btn ts-btn">Submit</button>
-          </div>
-        </form>
+      <div class="ac-btn">
+        <button class="btn" id="ac-btn">
+          <i class="fas fa-camera"></i>
+        </button>
       </div>
     </div>
-  </div>
+    <div class="greetings text" id="greetings">
+      <!-- Good Morning! -->
+    </div>
+    <div class="name text" id="user-name">
+      <!-- Md. Mehedi Hassan -->
+    </div>
 
+    <div class="date text" id="date">
+      <!-- Sunday- January 20, 2020 -->
+    </div>
+    <div class="time text" id="time">
+      <!-- 10:20:30 AM -->
+    </div>
 
-  <!-- Website link toggle button -->
-  <button class="btn sites-btn" id="sites">
-    <i class="fas fa-th"></i>
-  </button>
-
-
-  <!-- All sites container -->
-  <div class="sites-container" id="sites-container">
-    <div class="sites">
-      <div class="site">
-        <a target="_blank" target="_blank"href="https://google.com">
-          <i class="fab fa-google"></i>
-        </a>
-      </div>
-      <div class="site">
-        <a target="_blank" target="_blank"href="https://youtube.com">
-          <i class="fab fa-youtube"></i>
-        </a>
-      </div>
-      <div class="site">
-        <a target="_blank" target="_blank"href="https://facebook.com">
-          <i class="fab fa-facebook"></i>
-        </a>
-      </div>
-      <div class="site">
-        <a target="_blank" target="_blank"href="https://linkedin.com">
-          <i class="fab fa-linkedin"></i>
-        </a>
-      </div>
-      <div class="site">
-        <a target="_blank" target="_blank"href="https://twitter.com">
-          <i class="fab fa-twitter"></i>
-        </a>
-      </div>
-      <div class="site">
-        <a target="_blank" target="_blank"href="https://instagram.com">
-          <i class="fab fa-instagram"></i>
-        </a>
-      </div>
-      <div class="site">
-        <a target="_blank" target="_blank"href="https://github.com">
-          <i class="fab fa-github"></i>
-        </a>
-      </div>
-      <div class="site">
-        <a target="_blank" target="_blank"href="https://wikipedia.org">
-          <i class="fab fa-wikipedia-w"></i> 
-        </a>
-      </div>
-      <div class="site">
-        <a target="_blank" target="_blank"href="https://medium.com">
-          <i class="fab fa-medium"></i>
-        </a>
-      </div>
-      <div class="site">
-        <a target="_blank" target="_blank"href="https://quora.com">
-          <i class="fab fa-quora"></i>
-        </a>
-      </div>
-      <div class="site">
-        <a target="_blank" target="_blank"href="https://pinterest.com">
-          <i class="fab fa-pinterest"></i>
-        </a>
-      </div>
-      <div class="site">
-        <a target="_blank" target="_blank"href="https://vimeo.com">
-          <i class="fab fa-vimeo"></i>
-        </a>
+    <!-- Weather view container -->
+    <div class="weather-wrap" id="weather">
+      <div
+        style="display: flex; justify-content: center; align-items: center"
+        class="lead"
+      >
+        <p style="display: inline-block" class="icon">
+          <!-- <img src="" alt="Weather Icon"> -->
+        </p>
+        <span class="temp" style="color: var(--text-color)"></span><span> &#8451;</span>
       </div>
     </div>
-  </div>
 
-  <script src="app.js"></script>
-  
-</body>
+    <div class="todo-wrap" id="todo-container">
+      <h3 class="todo-heading">
+        My ToDo List
+        <button class="btn add-btn" id="todo-add">
+          <i class="fas fa-plus"></i>
+        </button>
+      </h3>
+      <ul class="todo-list" id="todo">
+        <li class="todo-item" data-id="01">
+          <p class="lead">Read More & More</p>
+          <p class="small">12 Dec, 2020 | 12:12:12 PM</p>
+          <div class="delete-btn">
+            <button class="btn del-btn close-btn">X</button>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="todo-form-wrap" id="tf-container">
+      <div class="tf-card">
+        <button class="btn close-btn" id="todo-close">X</button>
+        <div class="tf-card-h">
+          <h3>What is your main focus today?</h3>
+        </div>
+        <div class="tf-card-b">
+          <form id="todo-form">
+            <div class="form-group">
+              <p class="heading">Enter your task info</p>
+              <input
+                type="text"
+                name="task"
+                placeholder="Your task info."
+                id="task"
+                class="task"
+              />
+            </div>
+            <div class="form-group">
+              <button type="submit" class="btn ts-btn">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Website link toggle button -->
+    <button class="btn sites-btn" id="sites">
+      <i class="fas fa-th"></i>
+    </button>
+
+    <!-- All sites container -->
+    <div class="sites-container" id="sites-container">
+      <div class="sites">
+        <div class="site">
+          <a target="_blank" target="_blank" href="https://google.com">
+            <i class="fab fa-google"></i>
+          </a>
+        </div>
+        <div class="site">
+          <a target="_blank" target="_blank" href="https://youtube.com">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </div>
+        <div class="site">
+          <a target="_blank" target="_blank" href="https://facebook.com">
+            <i class="fab fa-facebook"></i>
+          </a>
+        </div>
+        <div class="site">
+          <a target="_blank" target="_blank" href="https://linkedin.com">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </div>
+        <div class="site">
+          <a target="_blank" target="_blank" href="https://twitter.com">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </div>
+        <div class="site">
+          <a target="_blank" target="_blank" href="https://instagram.com">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+        <div class="site">
+          <a target="_blank" target="_blank" href="https://github.com">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+        <div class="site">
+          <a target="_blank" target="_blank" href="https://wikipedia.org">
+            <i class="fab fa-wikipedia-w"></i>
+          </a>
+        </div>
+        <div class="site">
+          <a target="_blank" target="_blank" href="https://medium.com">
+            <i class="fab fa-medium"></i>
+          </a>
+        </div>
+        <div class="site">
+          <a target="_blank" target="_blank" href="https://quora.com">
+            <i class="fab fa-quora"></i>
+          </a>
+        </div>
+        <div class="site">
+          <a target="_blank" target="_blank" href="https://pinterest.com">
+            <i class="fab fa-pinterest"></i>
+          </a>
+        </div>
+        <div class="site">
+          <a target="_blank" target="_blank" href="https://vimeo.com">
+            <i class="fab fa-vimeo"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
 </html>
