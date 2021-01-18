@@ -316,6 +316,9 @@ body {
   color: #fff;
   font-family: var(--font4);
   font-style: italic;
+  letter-spacing: -1px;
+  word-spacing: -4px;
+  font-size: 15px;
   /* text-align: justify; */
   margin-top: 5px;
   margin-bottom: 17px;
