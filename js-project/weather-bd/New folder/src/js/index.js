@@ -46,7 +46,7 @@ const searchControl = async () => {
 
 
 const weatherViewControl = (info) => {
-  weatherView.renderWeather(info);
+  weatherView.renderWeather(info, state.weather.location);
 } 
 
 

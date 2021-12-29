@@ -1,12 +1,10 @@
 import {elements} from './base';
-import {convert} from '../models/Converter'
 
 export const currentTime = () => {
   
 
   setInterval(() => {
-    const d = new Date().toLocaleTimeString();
-    const time = convert(d);
+    const time = new Date().toLocaleTimeString('bn-BD');
     elements.time.innerHTML = `
     <p class="time">
       ${

@@ -6,10 +6,13 @@ export default class Weather {
   }
 
   async getWeather() {
-    const key = 'f9a9bb6567b443dabf5102430202112';
-    const day = 7;
+    const key = 'cd7826165c00ce8e484ddc9e03a2ea85';
     try {
-      const res = await axios(`https://api.weatherapi.com/v1/forecast.json?key=${key}&q=${this.location}&days=${day}&lang=bn`);
+      const latLonRes = await axios(`https://api.openweathermap.org/geo/1.0/direct?q=${this.location}&appid=${key}`);
+
+      const {lat, lon} = latLonRes.data[0];
+
+      const res = await axios(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=minutely,alerts&appid=${key}&units=metric&lang=bn`);
 
       this.result = res.data;
     } catch(err) {
