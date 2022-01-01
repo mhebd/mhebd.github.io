@@ -1,4 +1,4 @@
-const basicSetting = (() => {
+(() => {
     
   // Get all dom elements
   const domEl = {
@@ -21,7 +21,7 @@ const basicSetting = (() => {
     aFClose : document.getElementById('af-close')
   };
 
-  // Declear date object
+  // Declear date
   const date = new Date();
 
   // All event listeners
@@ -67,12 +67,9 @@ const basicSetting = (() => {
     e.preventDefault();
     const data = {};
     data.name = domEl.editForm.name.value;
-    data.bgs = domEl.editForm.bgs.value;
     data.location = domEl.editForm.location.value;
     data.color1 = domEl.editForm.color1.value;
     data.color2 = domEl.editForm.color2.value;
-
-    console.log(data);
 
     localStorage.setItem('data', JSON.stringify(data));
     domEl.editFormCon.classList.remove('show');
@@ -126,7 +123,7 @@ const basicSetting = (() => {
 
   // Set Icon 
   function setIcon(i) {
-    domEl.iconEl.innerHTML = `<img src="${i}" alt="Weather Icon">`;
+    domEl.iconEl.innerHTML = `<img src="https:${i}" alt="Weather Icon">`;
   }
 
   // Set greetings 
@@ -149,65 +146,32 @@ const basicSetting = (() => {
   };
 
   function setAvatar() {
-    const picUrl = localStorage.getItem('picture') !== null ? localStorage.getItem('picture') : 'img/16.jpg';
+    const picUrl = localStorage.getItem('picture') || 'https://png.pngtree.com/png-vector/20190225/ourlarge/pngtree-vector-avatar-icon-png-image_702436.jpg';
     domEl.avatarCon.innerHTML = `<img src="${picUrl}" alt="Your Avatar" class="avatar">`;
   }
 
   // Set date into dom
   function setDate() {
-    const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    const dt = date.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })
 
-    const months = [ 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-
-    let dy = date.getDay();
-    let m = date.getMonth();
-    let dt = date.getDate();
-    let y = date.getFullYear();
-
-    domEl.dateEl.innerText = `${days[dy]} - ${months[m]} ${dt}, ${y} `;
+    domEl.dateEl.innerText = `${dt}`;
   }
 
   // Set time into dom
   function setTime() {
     setInterval(() => {
-      // let date = new Date();
-      // let h = date.getHours();
-      // let m = date.getMinutes();
-      // let s = date.getSeconds();
-      // let status = h >= 12 ? 'PM' : 'AM';
-      
-      // h = h > 12 ? h - 12 : h;
-      // h = h < 10 ? '0' + h : h;
-      // m = m < 10 ? '0' + m : m;
-      // s = s < 10 ? '0' + s : s;
-      
-      // domEl.timeEl.innerText = `${h} : ${m} : ${s} ${status}`;
-
       domEl.timeEl.innerText = new Date().toLocaleTimeString();
     }, 1000);
   };
 
 
   // Set Background image
-  function setBackground() {
-    const data = localStorage.getItem('data');
+  async function setBackground() {
+    const res = await fetch(`https://api.unsplash.com/photos/random?client_id=OrhxU0W9Z03nJCKjuq4J1YTv8xXjut-zRU7m5KdTrhU&orientation=landscape&query=nature,sea,sea+beach,bird,animales`);
+    const data = await res.json();
 
-    const bgChanges = JSON.parse(data).bgs !== null ? JSON.parse(data).bgs : 'always';
-    document.getElementById(bgChanges).checked = true;
-
-    if( bgChanges === 'always' ) {
-      const imageNumber = 31;
-      const image = Math.floor(Math.random() * imageNumber) + 1;
-      document.body.style.backgroundImage = `
-        radial-gradient(rgba(0, 0, 0, 0.527), transparent), url(img/${image}.jpg)
-      `;
-    } else if( bgChanges === 'daily' ) {
-      let img = date.getDate();
-      // img = img > 18 ? img - 18 : img;
-      document.body.style.backgroundImage = `
-        radial-gradient(rgba(0, 0, 0, 0.527), transparent), url(img/${img}.jpg)
-      `;
-    };
+    document.body.style.backgroundImage = `
+    radial-gradient(rgba(0, 0, 0, 0.527), transparent), url(${data.urls.full})`;
   };
 
   // Avatar form show
@@ -264,7 +228,7 @@ const basicSetting = (() => {
 
 
 // ToDo list all settings
-const todoListSetting = (() => {
+(() => {
   // All dom element list
   const domEl = {
     tfCont : document.getElementById('tf-container'),
@@ -341,7 +305,7 @@ const todoListSetting = (() => {
 
   // Get list from localstorage
   function getListLocStg() {
-    return strgList = JSON.parse(localStorage.getItem('listItems'));
+    return strgList = JSON.parse(localStorage.getItem('listItems')) || [];
   };
 
   // Set list to the dom
@@ -399,7 +363,6 @@ const todoListSetting = (() => {
   // Remove list by index
   function removeListByIndex(i) {
     listItems.splice(i, 1);
-    console.log(listItems);
   };
 
   // Update id again
