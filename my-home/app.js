@@ -167,7 +167,7 @@
 
   // Set Background image
   async function setBackground() {
-    const res = await fetch(`https://api.unsplash.com/photos/random?client_id=OrhxU0W9Z03nJCKjuq4J1YTv8xXjut-zRU7m5KdTrhU&orientation=landscape&query=nature,sea,sea+beach,bird,animales`);
+    const res = await fetch(`https://api.unsplash.com/photos/random?client_id=OrhxU0W9Z03nJCKjuq4J1YTv8xXjut-zRU7m5KdTrhU&orientation=landscape&query=sea,beach,birds,flowers`);
     const data = await res.json();
 
     document.body.style.backgroundImage = `
