@@ -571,6 +571,10 @@ body {
   }
 }
 @media (max-width: 600px) {
+  body {
+    max-width: 600px;
+    max-height: 100%;
+  }
   .avatar-wrap {
     width: 120px;
     height: 120px;
@@ -579,7 +583,7 @@ body {
     min-height: 120px;
   }
   .text {
-    font-size: 1.1em;
+    font-size: 1.3em;
   }
   .weather-wrap {
     font-size: 1.2em;
